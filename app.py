@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import requests
 import base64
-
 import time
 import uuid
 
@@ -11,12 +10,29 @@ GITHUB_TOKEN = 'github_pat_11ATCOXUI0Ibjg5BCjdfxS_lDfypgburWG3g9IBPkTuSSruh7Pru6
 REPO = 'Mr-KID-github/answer.ai'
 API_URL_TEMPLATE = 'https://api.github.com/repos/{}/contents/{}'
 
-
 def generate_unique_filename(original_filename):
     ext = original_filename.split('.')[-1]
     timestamp = str(int(time.time()))
     unique_id = uuid.uuid4().hex
     return f"{timestamp}-{unique_id}.{ext}"
+
+def use_mathAPI(image_url):
+    print("调用Math API")
+    MATH_API_URL = "https://math.rockeyops.com/api/v1/math/solve"
+    MATH_API_HEADERS = {
+        "x-app-id": "math-app",
+        "x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
+        "Content-Type": "application/json"
+    }
+    # 调用数学 API
+    math_api_data = {
+        "stream": False,
+        "url": image_url
+    }
+    math_response = requests.post(MATH_API_URL, headers=MATH_API_HEADERS, json=math_api_data)
+    print(math_response)
+    return math_response
+
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -48,15 +64,21 @@ def upload():
         "content": image_data
     }
     
-    response = requests.put(github_api_url, headers=headers, json=data)
-
-    # 打印响应内容以进行调试
-    print(response.text)
+    github_response = requests.put(github_api_url, headers=headers, json=data)
     
-    if response.status_code == 200 or response.status_code == 201:
-        return jsonify(success=True, url=response.json()['content']['download_url'])
-    else:
-        return jsonify(success=False, message="Upload failed"), 400
+    if github_response.status_code not in [200, 201]:
+        return jsonify(success=False, message="Upload to GitHub failed"), 400
+
+    # 获取 GitHub 图片 URL
+    image_url = github_response.json()['content']['download_url']
+
+    return image_url
+
+    # math_response = use_mathAPI(image_url)
+    # if math_response.status_code == 200:
+    #     return jsonify(success=True, result=math_response.json())
+    # else:
+    #     return jsonify(success=False, message="Math API call failed", error=math_response.text), 500
 
 
 if __name__ == '__main__':
