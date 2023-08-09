@@ -158,12 +158,20 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
+//
+//
+//
+//
+//
 //
 //
 //
@@ -207,13 +215,145 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      title: 'Hello'
+      gpt_answer: 'Hello',
+      work_image: "",
+      originalText: "",
+      analyze_math_data: "",
+      currentCharIndex: 0
     };
   },
   onLoad: function onLoad() {},
-  methods: {}
+  methods: {
+    // 逐字显示
+    displayTextByChar: function displayTextByChar() {
+      if (this.currentCharIndex < this.originalText.length) {
+        this.analyze_math_data += this.originalText[this.currentCharIndex];
+        this.currentCharIndex++;
+        setTimeout(this.displayTextByChar, 100); // 每 100 毫秒显示一个字符
+      }
+    },
+    startDisplay: function startDisplay() {
+      this.analyze_math_data = ""; // 清空文本
+      this.currentCharIndex = 0; // 重置索引
+      this.displayTextByChar(); // 开始逐字符显示
+    },
+    chooseAndUploadImage: function chooseAndUploadImage() {
+      var that = this;
+      uni.chooseImage({
+        count: 1,
+        // 可选择的图片数量，这里设置为1表示每次只能选择一张图片
+        sourceType: ['album', 'camera'],
+        // 图片的来源，可以是相册或相机
+        success: function success(res) {
+          var tempFilePaths = res.tempFilePaths; // 选择的图片临时文件路径
+          that.work_image = tempFilePaths;
+          // 处理选择的图片逻辑，比如上传到服务器等
+          console.log(tempFilePaths);
+          that.upload_img_to_server(tempFilePaths[0]);
+        },
+        fail: function fail(err) {
+          console.log(err);
+        }
+      });
+    },
+    upload_img_to_server: function upload_img_to_server(filePath) {
+      var _this = this;
+      console.log("调用upload_img_to_server");
+      uni.uploadFile({
+        url: 'http://127.0.0.1:5000/upload',
+        // 替换为您的服务器地址
+        filePath: filePath,
+        name: "image",
+        success: function success(res) {
+          console.log(res);
+          var data = res.data;
+          if (data) {
+            console.log("图片上传成功");
+            uni.showToast({
+              title: 'Upload successful',
+              icon: 'success'
+            });
+            console.log("开始图片解析");
+            _this.analyze_img(data);
+          } else {
+            uni.showToast({
+              title: 'Upload failed',
+              icon: 'none'
+            });
+          }
+        },
+        fail: function fail() {
+          uni.showToast({
+            title: 'Server error',
+            icon: 'none'
+          });
+        }
+      });
+    },
+    analyze_img: function analyze_img(tempFilePaths) {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var apiUrl, header, data, response;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                // 使用uni.uploadFile上传图片至云服务器
+                console.log(tempFilePaths);
+                apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
+                header = {
+                  "x-app-id": "math-app",
+                  "x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
+                  "Content-Type": "application/json" // Assuming the API expects JSON content type
+                };
+                data = {
+                  stream: false,
+                  url: tempFilePaths
+                };
+                _context.prev = 4;
+                uni.showLoading({
+                  title: "解析中..."
+                });
+                console.log("开始调用数学题扫描解答");
+                _context.next = 9;
+                return uni.request({
+                  url: apiUrl,
+                  method: "POST",
+                  header: header,
+                  data: data
+                });
+              case 9:
+                response = _context.sent;
+                if (response.statusCode === 200) {
+                  console.log("API response:", response.data);
+                  // Process the response data as needed
+                  _this2.originalText = response.data.data.content;
+                  _this2.startDisplay();
+                } else {
+                  console.error("Error calling API:", response);
+                }
+                _context.next = 16;
+                break;
+              case 13:
+                _context.prev = 13;
+                _context.t0 = _context["catch"](4);
+                console.error("API call failed:", _context.t0);
+              case 16:
+                _context.prev = 16;
+                uni.hideLoading();
+                return _context.finish(16);
+              case 19:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[4, 13, 16, 19]]);
+      }))();
+    }
+  }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

@@ -4,22 +4,27 @@
 			<!-- 标题框架:Chat Test -->
 			<view class="title_frame">
 				<text class="title_1">Math Test</text>
-				<text class="title_2">上传题目图片</text>
+				<text class="title_2">上传题目图片（目前只支持latex格式的数学题）</text>
 			</view>
 			
 			<!-- 使用示例按钮 -->
-			<button class="button_example">UpLoad Math Image</button>
+			<button class="button_example" @click="chooseAndUploadImage">UpLoad Math Image</button>
 			
 			<!-- 提问框 -->
-			<view class="response_result" :style="gpt_answer?'width: 500rpx;':''">
+			<view class="response_result">
+				<image :src="work_image"></image>
+			</view>
+			
+			<!-- 提问框 -->
+<!-- 			<view class="response_result" :style="gpt_answer?'width: 500rpx;':''">
 				<image v-if="!gpt_answer" src="https://s3-alpha-sig.figma.com/img/46b9/ef5f/b5b166af39d5cf7d66c8cda918d6278c?Expires=1690156800&Signature=S8SSJ3JtrxTTwwlF-YFDyacPqAIdvJaOz-b-l4mjgT~~p~Fqhfsqcls~0t~0tiC2hLjTb3HTlJsJo2BcUjmtEfEm-1W0h4dB8dXPDhM5CnqqLl5arNPFYWihsBUvqlboUDI2m~VbkfGit7rS95uRByXHxKL53i9BM1hgRJt~TshEpQBhZJqKf8PzC37Y5EPXpt3VD858dKmhD3U5tHYjzJR0~GwFcwHnACzqDW1V6B-MnrHUZz1eYgeD1A3YvbxyhpZ~~G0CM71hZVOa8WHk39UgvS9v3C9I8Fp-2Xs~RVQlACtsSlIq6MRMgE-t~3iFXkg9qxm~qOcfevrAjXAj9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"></image>
 				<text v-if="gpt_answer">{{gpt_answer}}</text>
-			</view>
+			</view> -->
 			
 			<!-- 标题框架:Chat Test -->
 			<view class="title_frame">
 				<text class="title_2">解析题目数据</text>
-				<text class="title_2">Hello! It seems like you provided the......</text>
+				<text class="title_2">{{ analyze_math_data }}</text>
 			</view>
 				
 			<!-- 标题框架:Chat Test -->
@@ -42,14 +47,121 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				gpt_answer: 'Hello',
+				work_image:"",
+				originalText: "",
+				analyze_math_data: "",
+				currentCharIndex: 0
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
+			// 逐字显示
+			displayTextByChar() {
+				if (this.currentCharIndex < this.originalText.length) {
+					this.analyze_math_data += this.originalText[this.currentCharIndex];
+					this.currentCharIndex++;
+					setTimeout(this.displayTextByChar, 100);  // 每 100 毫秒显示一个字符
+				}
+			},
+			startDisplay() {
+				this.analyze_math_data = "";  // 清空文本
+				this.currentCharIndex = 0;  // 重置索引
+				this.displayTextByChar();  // 开始逐字符显示
+			},
+			chooseAndUploadImage() {
+				var that = this
+				uni.chooseImage({
+				        count: 1, // 可选择的图片数量，这里设置为1表示每次只能选择一张图片
+				        sourceType: ['album', 'camera'], // 图片的来源，可以是相册或相机
+				        success: (res) => {
+				          const tempFilePaths = res.tempFilePaths; // 选择的图片临时文件路径
+						  that.work_image = tempFilePaths
+				          // 处理选择的图片逻辑，比如上传到服务器等
+						  console.log(tempFilePaths)
+						  that.upload_img_to_server(tempFilePaths[0])
+				        },
+				        fail: (err) => {
+				          console.log(err)
+				        }
+				});
+			},
 
+			upload_img_to_server(filePath) {
+				console.log("调用upload_img_to_server")
+			    uni.uploadFile({
+			        url: 'http://127.0.0.1:5000/upload', // 替换为您的服务器地址
+			        filePath: filePath,
+			        name: "image",
+			        success: (res) => {
+						console.log(res)
+			            let data = res.data
+			            if (data) {
+							console.log("图片上传成功")
+			                uni.showToast({
+			                    title: 'Upload successful',
+			                    icon: 'success'
+			                });
+							console.log("开始图片解析")
+							this.analyze_img(data)
+			            } else {
+			                uni.showToast({
+			                    title: 'Upload failed',
+			                    icon: 'none'
+			                });
+			            }
+			        },
+			        fail: () => {
+			            uni.showToast({
+			                title: 'Server error',
+			                icon: 'none'
+			            });
+			        }
+			    });
+			},
+			async analyze_img(tempFilePaths){
+				// 使用uni.uploadFile上传图片至云服务器
+				console.log(tempFilePaths)
+				const apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
+				const header = {
+					"x-app-id": "math-app",
+					"x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
+					"Content-Type": "application/json" // Assuming the API expects JSON content type
+				};
+				const data = {
+					stream: false,
+					url: tempFilePaths
+				};
+		
+				try {
+					uni.showLoading({
+						title: "解析中..."
+					})
+					console.log("开始调用数学题扫描解答")
+					const response = await uni.request({
+						url: apiUrl,
+						method: "POST",
+						header: header,
+						data: data
+					});
+		
+					if (response.statusCode === 200) {
+						console.log("API response:", response.data);
+						// Process the response data as needed
+						this.originalText = response.data.data.content
+						this.startDisplay()
+					} else {
+						console.error("Error calling API:", response);
+					}
+				} catch (error) {
+					console.error("API call failed:", error);
+				} finally {
+					uni.hideLoading()
+				}
+				
+			},
 		}
 	}
 </script>
