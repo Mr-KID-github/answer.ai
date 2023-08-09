@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "custom_input": "/components/custom_input/custom_input"
+  }
+}
