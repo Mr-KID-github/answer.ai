@@ -38,7 +38,6 @@
 			<view class="title_frame">
 				<text class="title_2">你好呀！很高兴见到你。我是ChatGPT，有什么我可以帮助你的吗？</text>
 			</view>
-
 		</view>
 	</view>
 </template>
@@ -55,7 +54,7 @@
 			}
 		},
 		onLoad() {
-
+			const MathJax = require('mathjax');
 		},
 		methods: {
 			// 逐字显示
