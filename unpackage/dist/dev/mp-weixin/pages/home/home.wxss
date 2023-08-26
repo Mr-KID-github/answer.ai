@@ -48,6 +48,10 @@
 		flex-shrink: 0;
 }
 .conten_frame{
+		width: 343px;
+		align-items: flex-start;
+		gap: 20px;
+		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -59,6 +63,7 @@
 		margin-top: auto;
 		width: 100%;
 		flex: 1;  /* 这使得它能够自动扩展并占据所有剩余空间 */
+		padding-bottom: 40px;
 }
 .background{
 	
@@ -79,5 +84,64 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
+}
+.title_frame{
+		display: flex;
+		width: 343px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+}
+.title_1{
+		color: var(--gray-900, #18181B);
+		-webkit-font-feature-settings: 'clig' off, 'liga' off;
+		        font-feature-settings: 'clig' off, 'liga' off;
+		font-family: Manrope;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 30px; /* 136.364% */
+		letter-spacing: -0.4px;
+}
+.title_2{
+		color: var(--gray-600, #52525B);
+		-webkit-font-feature-settings: 'clig' off, 'liga' off;
+		        font-feature-settings: 'clig' off, 'liga' off;
+		font-family: Manrope;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 24px; /* 150% */
+		letter-spacing: -0.4px;
+}
+.button_example{
+		/* 布局样式 */
+		display: flex;
+		width: 343px;
+		padding: 10px 24px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 12px;
+		background: var(--teal-900, #134E4A);
+		/* 字体 */
+		color: var(--base-white, #FFF);
+		-webkit-font-feature-settings: 'clig' off, 'liga' off;
+		        font-feature-settings: 'clig' off, 'liga' off;
+		font-family: Manrope;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 24px; /* 150% */
+		letter-spacing: -0.4px;
+}
+.response_result{
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #f8f8f8;
+}
+.response_result image{
+		border-radius: 10px;
 }
 
