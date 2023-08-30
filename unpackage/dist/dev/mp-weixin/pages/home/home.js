@@ -101,16 +101,16 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 184))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 176))
     },
     custom_input: function () {
-      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 216))
+      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 184))
     },
     uTabbar: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 200))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 189))
     },
     uTabbarItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 208))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 197))
     },
   }
 } catch (e) {
@@ -134,11 +134,44 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.originalText.length
+  var l0 =
+    g0 != 0
+      ? _vm.__map(_vm.parts, function (part, index) {
+          var $orig = _vm.__get_orig(part)
+          var m0 = _vm.isLatex(part)
+          return {
+            $orig: $orig,
+            m0: m0,
+          }
+        })
+      : null
+  var g1 =
+    _vm.analyze_math_data.length == _vm.originalText.length &&
+    _vm.originalText.length != 0
+  var g2 =
+    _vm.analyze_math_data.length == _vm.originalText.length &&
+    _vm.originalText.length != 0
+  var g3 =
+    _vm.analyze_math_data.length == _vm.originalText.length &&
+    _vm.originalText.length != 0
   if (!_vm._isMounted) {
     _vm.e0 = function (name) {
       return (_vm.value6 = name)
     }
   }
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+        l0: l0,
+        g1: g1,
+        g2: g2,
+        g3: g3,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -251,6 +284,11 @@ var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/r
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -263,13 +301,85 @@ var _default = {
       work_image: "",
       originalText: "",
       analyze_math_data: "",
-      currentCharIndex: 0
+      currentCharIndex: 0,
+      parts: []
     };
   },
   onLoad: function onLoad() {
     // const MathJax = require('mathjax');
   },
   methods: {
+    isLatex: function isLatex(part) {
+      console.log(part);
+      if (typeof part === 'string') {
+        if (part.startsWith('$') && part.endsWith('$')) {
+          return true;
+        }
+        if (part.startsWith("data:image/png;base64")) {
+          return true;
+        }
+      }
+      return false;
+    },
+    getLatexImageUrl: function getLatexImageUrl(formula, index) {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var response, base64Data, dataUrl;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return uni.request({
+                  url: getApp().globalData.server + '/latex',
+                  method: 'POST',
+                  data: {
+                    formula: formula
+                  },
+                  responseType: 'arraybuffer' // 这确保你获取的是一个字节流
+                });
+              case 2:
+                response = _context.sent;
+                // 将字节流转换为 data URL 以在前端显示
+                console.log(response);
+                base64Data = uni.arrayBufferToBase64(response.data);
+                dataUrl = "data:image/png;base64," + base64Data; // console.log(dataUrl)
+                // Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
+                // 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
+                // this.parts[index] = dataUrl
+                _this.$set(_this.parts, index, dataUrl);
+                // console.log("之后的this.parts[index]：",this.parts[index])
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    processText: function processText() {
+      var _this2 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var i;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // 使用正则表达式拆分文本
+                _this2.parts = _this2.originalText.split(/(\$\$?.+?\$\$?)/);
+                for (i = 0; i < _this2.parts.length; i++) {
+                  if (_this2.isLatex(_this2.parts[i])) {
+                    _this2.getLatexImageUrl(_this2.parts[i], i);
+                  }
+                }
+              case 2:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    },
     // 逐字显示
     displayTextByChar: function displayTextByChar() {
       if (this.currentCharIndex < this.originalText.length) {
@@ -303,11 +413,10 @@ var _default = {
       });
     },
     upload_img_to_server: function upload_img_to_server(filePath) {
-      var _this = this;
+      var _this3 = this;
       console.log("调用upload_img_to_server");
       uni.uploadFile({
-        url: 'http://127.0.0.1:5000/upload',
-        // 替换为您的服务器地址
+        url: getApp().globalData.server + '/upload',
         filePath: filePath,
         name: "image",
         success: function success(res) {
@@ -320,7 +429,7 @@ var _default = {
               icon: 'success'
             });
             console.log("开始图片解析");
-            _this.analyze_img(data);
+            _this3.analyze_img(data);
           } else {
             uni.showToast({
               title: 'Upload failed',
@@ -337,12 +446,12 @@ var _default = {
       });
     },
     analyze_img: function analyze_img(tempFilePaths) {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var apiUrl, header, data, response;
-        return _regenerator.default.wrap(function _callee$(_context) {
+      var _this4 = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
+        var apiUrl, header, data, that, response;
+        return _regenerator.default.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
                 // 使用uni.uploadFile上传图片至云服务器
                 console.log(tempFilePaths);
@@ -356,44 +465,58 @@ var _default = {
                   stream: false,
                   url: tempFilePaths
                 };
-                _context.prev = 4;
+                that = _this4;
+                _context3.prev = 5;
                 uni.showLoading({
                   title: "解析中..."
                 });
                 console.log("开始调用数学题扫描解答");
-                _context.next = 9;
+                _context3.next = 10;
                 return uni.request({
                   url: apiUrl,
                   method: "POST",
                   header: header,
                   data: data
                 });
-              case 9:
-                response = _context.sent;
+              case 10:
+                response = _context3.sent;
                 if (response.statusCode === 200) {
                   console.log("API response:", response.data);
-                  // Process the response data as needed
-                  _this2.originalText = response.data.data.content;
-                  _this2.startDisplay();
-                } else {
-                  console.error("Error calling API:", response);
+                  if (response.data.msg == 'invalid image') {
+                    uni.showModal({
+                      title: "太火爆了！",
+                      content: "请重试一遍",
+                      showCancel: false,
+                      success: function success(res) {
+                        // if (res.confirm) {
+                        // 	that.analyze_img(tempFilePaths)
+                        // }
+                      }
+                    });
+                    console.error("Error calling API:", response);
+                  } else {
+                    // Process the response data as needed
+                    _this4.originalText = response.data.data.content;
+                    // this.startDisplay()
+                    _this4.processText();
+                  }
                 }
-                _context.next = 16;
+                _context3.next = 17;
                 break;
-              case 13:
-                _context.prev = 13;
-                _context.t0 = _context["catch"](4);
-                console.error("API call failed:", _context.t0);
-              case 16:
-                _context.prev = 16;
+              case 14:
+                _context3.prev = 14;
+                _context3.t0 = _context3["catch"](5);
+                console.error("API call failed:", _context3.t0);
+              case 17:
+                _context3.prev = 17;
                 uni.hideLoading();
-                return _context.finish(16);
-              case 19:
+                return _context3.finish(17);
+              case 20:
               case "end":
-                return _context.stop();
+                return _context3.stop();
             }
           }
-        }, _callee, null, [[4, 13, 16, 19]]);
+        }, _callee3, null, [[5, 14, 17, 20]]);
       }))();
     }
   }

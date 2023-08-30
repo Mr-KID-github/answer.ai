@@ -109,6 +109,9 @@ var _default = {
   },
   onHide: function onHide() {
     console.log('App Hide');
+  },
+  globalData: {
+    server: 'https://www.withtime.site/answerai'
   }
 };
 exports.default = _default;

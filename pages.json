@@ -9,8 +9,14 @@
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
+		        "enablePullDownRefresh": false,
+				"mp-weixin": {
+						"usingComponents": {
+							"htmltowxml": "/wxcomponents/towxml/htmltowxml"
+						}
+					}
 		    }
+			
 		    
 		},
 		{

@@ -8,6 +8,9 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		globalData: {
+			server:'https://www.withtime.site/answerai',
 		}
 	}
 </script>

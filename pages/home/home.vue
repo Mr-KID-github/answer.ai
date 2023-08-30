@@ -2,7 +2,6 @@
 	<view class="background">
 		<view class="title">Answer AI China</view>
 		
-
 		<view style="margin-top:10px; width: 100%; padding-left: 40px; background: transparent; margin-bottom: 30px;">
 			<u-tabs :list="list1"></u-tabs>
 		</view>
@@ -19,7 +18,7 @@
 			</view>
 			
 			<!-- 提问框 -->
-			<view class="response_result">
+			<view class="response_result" v-if="work_image">
 				<image :src="work_image"></image>
 			</view>
 			
@@ -30,21 +29,27 @@
 			</view> -->
 			
 			<!-- 标题框架:Chat Test -->
-			<view class="title_frame">
+			<view class="title_frame" v-if="originalText.length != 0">
 				<text class="title_2">解析题目数据</text>
-				<text class="title_2">{{ analyze_math_data }}</text>
+				<view v-for="(part, index) in parts">
+				    <text v-if="!isLatex(part)" :key="'text-' + index">{{ parts[index] }}</text>
+				    <image style="" mode="widthFix" v-else :key="'image-' + index" :src="parts[index]"/>
+				</view>
+				<!-- <text class="title_2">{{ analyze_math_data }}</text> -->
 			</view>
 				
 			<!-- 标题框架:Chat Test -->
-			<view class="title_frame">
+			<view class="title_frame" v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
 				<text class="title_1">深入交流</text>
 				<text class="title_2">如果有不懂的地方继续提问吧~</text>
 			</view>
 			
 			<!-- 提问框 -->
-			<custom_input></custom_input>
-			<view class="title_frame">
-				<text class="title_2">你好呀！很高兴见到你。我是ChatGPT，有什么我可以帮助你的吗？</text>
+			<view v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
+				<custom_input></custom_input>
+			</view>
+			<view class="title_frame" v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
+				<text class="title_2">你好呀！很高兴见到你。有什么我可以帮助你的吗？</text>
 			</view>
 		</view>
 					
@@ -77,19 +82,62 @@
 	                }],
 					value6: 0,
 					text1: '快加入学习群',
-					
-					
 					gpt_answer: 'Hello',
 					work_image:"",
 					originalText: "",
 					analyze_math_data: "",
-					currentCharIndex: 0
+					currentCharIndex: 0,
+					parts: []
 	            }
 	        },
 			onLoad() {
 				// const MathJax = require('mathjax');
 			},
 			methods: {
+				isLatex(part) {
+					console.log(part)
+					if (typeof part === 'string') {
+						if (part.startsWith('$') && part.endsWith('$')) {
+							return true;
+						}
+						if (part.startsWith("data:image/png;base64")) {
+							return true;
+						}
+					}
+					return false;
+				},
+				async getLatexImageUrl(formula,index) {
+					// console.log("之前的this.parts[index]：",this.parts[index])
+					// console.log(formula)
+				    let response = await uni.request({
+				        url: getApp().globalData.server + '/latex',
+				        method: 'POST',
+				        data: {
+				            formula: formula
+				        },
+				        responseType: 'arraybuffer'  // 这确保你获取的是一个字节流
+				    });
+					
+				    // 将字节流转换为 data URL 以在前端显示
+				    console.log(response);
+				    const base64Data = uni.arrayBufferToBase64(response.data);
+				    const dataUrl = "data:image/png;base64," + base64Data;
+					// console.log(dataUrl)
+					// Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
+					// 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
+					// this.parts[index] = dataUrl
+					this.$set(this.parts, index, dataUrl);
+					// console.log("之后的this.parts[index]：",this.parts[index])
+				},
+				async processText() {
+					// 使用正则表达式拆分文本
+					this.parts = this.originalText.split(/(\$\$?.+?\$\$?)/);
+					for (let i = 0; i < this.parts.length; i++) {
+						if (this.isLatex(this.parts[i])) {
+							this.getLatexImageUrl(this.parts[i],i);
+						}
+					}
+				},
 				// 逐字显示
 				displayTextByChar() {
 					if (this.currentCharIndex < this.originalText.length) {
@@ -124,7 +172,7 @@
 				upload_img_to_server(filePath) {
 					console.log("调用upload_img_to_server")
 				    uni.uploadFile({
-				        url: 'http://127.0.0.1:5000/upload', // 替换为您的服务器地址
+				        url: getApp().globalData.server + '/upload',
 				        filePath: filePath,
 				        name: "image",
 				        success: (res) => {
@@ -166,7 +214,8 @@
 						stream: false,
 						url: tempFilePaths
 					};
-			
+					
+					var that = this
 					try {
 						uni.showLoading({
 							title: "解析中..."
@@ -181,11 +230,24 @@
 			
 						if (response.statusCode === 200) {
 							console.log("API response:", response.data);
-							// Process the response data as needed
-							this.originalText = response.data.data.content
-							this.startDisplay()
-						} else {
-							console.error("Error calling API:", response);
+							if (response.data.msg == 'invalid image') {
+								uni.showModal({
+									title:"太火爆了！",
+									content:"请重试一遍",
+									showCancel:false,
+									success(res) {
+										// if (res.confirm) {
+										// 	that.analyze_img(tempFilePaths)
+										// }
+									}
+								})
+								console.error("Error calling API:", response);
+							} else {
+								// Process the response data as needed
+								this.originalText = response.data.data.content
+								// this.startDisplay()
+								this.processText();
+							}
 						}
 					} catch (error) {
 						console.error("API call failed:", error);
