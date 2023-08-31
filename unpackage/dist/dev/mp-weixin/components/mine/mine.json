@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navigation_component": "/components/navigation_component/navigation_component",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup"
+  },
+  "component": true
+}

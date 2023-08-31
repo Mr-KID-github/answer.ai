@@ -101,13 +101,19 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 203))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 184))
+    },
+    home_component: function () {
+      return __webpack_require__.e(/*! import() | components/home_component/home_component */ "components/home_component/home_component").then(__webpack_require__.bind(null, /*! @/components/home_component/home_component.vue */ 263))
+    },
+    mine: function () {
+      return __webpack_require__.e(/*! import() | components/mine/mine */ "components/mine/mine").then(__webpack_require__.bind(null, /*! @/components/mine/mine.vue */ 271))
     },
     uTabbar: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 211))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 192))
     },
     uTabbarItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 219))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 200))
     },
   }
 } catch (e) {
@@ -131,36 +137,11 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.parts.length
-  var l0 =
-    g0 != 0
-      ? _vm.__map(_vm.parts, function (part, index) {
-          var $orig = _vm.__get_orig(part)
-          var m0 = _vm.isLatex(part)
-          var m1 = !!m0 ? _vm.isLatex(part) : null
-          var m2 = !!m0 && m1 ? _vm.latexBackground(part) : null
-          return {
-            $orig: $orig,
-            m0: m0,
-            m1: m1,
-            m2: m2,
-          }
-        })
-      : null
   if (!_vm._isMounted) {
     _vm.e0 = function (name) {
-      return (_vm.value6 = name)
+      return (_vm.tar_value = name)
     }
   }
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        g0: g0,
-        l0: l0,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -194,34 +175,12 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -264,205 +223,17 @@ var _default = {
       list1: [{
         name: 'AI搜题'
       }],
-      value6: 0,
-      text1: '快加入学习群',
-      gpt_answer: 'Hello',
-      work_image: "",
-      // originalText: "",
-      analyze_math_data: "",
-      currentCharIndex: 0,
-      parts: []
+      tar_value: 0
     };
   },
-  onLoad: function onLoad() {
-    // const MathJax = require('mathjax');
-  },
+  onLoad: function onLoad() {},
   methods: {
-    latexBackground: function latexBackground(svgData) {
-      return "background-image: url(".concat(svgData, "); background-size: cover;");
-    },
-    handleImageError: function handleImageError(e) {
-      console.log('Image loading error:', e);
-    },
-    isLatex: function isLatex(part) {
-      console.log("isLatex:", part);
-      if (typeof part === 'string') {
-        // // 检查是否是 LaTeX 公式的文本表示
-        // if (part.startsWith('$') && part.endsWith('$')) {
-        //     return true;
-        // }
-        // // 检查是否是 PNG 图像的 Base64 编码数据
-        // if (part.startsWith("data:image/png;base64")) {
-        //     return true;
-        // }
-        // 检查是否是 SVG 图像的 Base64 编码数据
-        if (part.startsWith("data:image/svg+xml;base64")) {
-          console.log("part是svg");
-          return true;
-        }
-      }
-      return false;
-    },
-    // async getLatexImageUrl(formula,index) {
-    // 	// console.log("之前的this.parts[index]：",this.parts[index])
-    // 	// console.log(formula)
-    //     let response = await uni.request({
-    //         url: getApp().globalData.server + '/latex',
-    //         method: 'POST',
-    //         data: {
-    //             formula: formula
-    //         },
-    //         responseType: 'arraybuffer'  // 这确保你获取的是一个字节流
-    //     });
-    //     // 将字节流转换为 data URL 以在前端显示
-    //     console.log(response);
-    //     const base64Data = uni.arrayBufferToBase64(response.data);
-    //     const dataUrl = "data:image/png;base64," + base64Data;
-    // 	// console.log(dataUrl)
-    // 	// Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
-    // 	// 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
-    // 	// this.parts[index] = dataUrl
-    // 	this.$set(this.parts, index, dataUrl);
-    // 	// console.log("之后的this.parts[index]：",this.parts[index])
-    // },
-    // async processText() {
-    // 	// 使用正则表达式拆分文本
-    // 	this.parts = this.originalText.split(/(\$\$?.+?\$\$?)/);
-    // 	for (let i = 0; i < this.parts.length; i++) {
-    // 		if (this.isLatex(this.parts[i])) {
-    // 			this.getLatexImageUrl(this.parts[i],i);
-    // 		}
-    // 	}
-    // },
-    // 逐字显示
-    displayTextByChar: function displayTextByChar() {
-      if (this.currentCharIndex < this.originalText.length) {
-        this.analyze_math_data += this.originalText[this.currentCharIndex];
-        this.currentCharIndex++;
-        setTimeout(this.displayTextByChar, 100); // 每 100 毫秒显示一个字符
-      }
-    },
-    startDisplay: function startDisplay() {
-      this.analyze_math_data = ""; // 清空文本
-      this.currentCharIndex = 0; // 重置索引
-      this.displayTextByChar(); // 开始逐字符显示
-    },
-    chooseAndUploadImage: function chooseAndUploadImage() {
-      var that = this;
-      uni.chooseImage({
-        count: 1,
-        // 可选择的图片数量，这里设置为1表示每次只能选择一张图片
-        sourceType: ['album', 'camera'],
-        // 图片的来源，可以是相册或相机
-        success: function success(res) {
-          var tempFilePath = res.tempFilePaths[0]; // 选择的图片临时文件路径
-          uni.getFileSystemManager().readFile({
-            filePath: tempFilePath,
-            encoding: 'base64',
-            success: function success(readFileRes) {
-              var base64Data = 'data:image/jpeg;base64,' + readFileRes.data;
-              that.work_image = base64Data;
-              // console.log("that.work_image:",that.work_image)
-            }
-          });
-          // 处理选择的图片逻辑，比如上传到服务器等
-          that.upload_img_to_server(res.tempFilePaths[0]);
-        },
-        fail: function fail(err) {
-          console.log(err);
-        }
-      });
-    },
-    upload_img_to_server: function upload_img_to_server(filePath) {
-      var _this = this;
-      console.log("调用upload_img_to_server,现在已经改为调用use_mathAPI");
-      uni.showLoading({
-        title: "解析中..."
-      });
-      uni.uploadFile({
-        url: getApp().globalData.server + '/use_mathAPI',
-        filePath: filePath,
-        name: "image",
-        success: function success(res) {
-          console.log(res);
-          if (res.statusCode == 200) {
-            var dataArray = JSON.parse(res.data);
-            _this.parts = dataArray;
-            console.log(_this.parts);
-          } else {
-            uni.showModal({
-              title: "测试弹窗",
-              content: "statusCode:" + res.statusCode,
-              showCancel: false
-            });
-          }
-        },
-        fail: function fail() {
-          uni.showToast({
-            title: 'Server error',
-            icon: 'none'
-          });
-        },
-        complete: function complete() {
-          uni.hideLoading();
-        }
-      });
-    } // 	async analyze_img(tempFilePaths){
-    // 		// 使用uni.uploadFile上传图片至云服务器
-    // 		console.log(tempFilePaths)
-    // 		const apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
-    // 		const header = {
-    // 			"x-app-id": "math-app",
-    // 			"x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
-    // 			"Content-Type": "application/json" // Assuming the API expects JSON content type
-    // 		};
-    // 		const data = {
-    // 			stream: false,
-    // 			url: tempFilePaths
-    // 		};
-    // 		var that = this
-    // 		try {
-    // 			uni.showLoading({
-    // 				title: "解析中..."
-    // 			})
-    // 			console.log("开始调用数学题扫描解答")
-    // 			const response = await uni.request({
-    // 				url: apiUrl,
-    // 				method: "POST",
-    // 				header: header,
-    // 				data: data
-    // 			});
-    // 			if (response.statusCode === 200) {
-    // 				console.log("API response:", response.data);
-    // 				if (response.data.msg == 'invalid image') {
-    // 					uni.showModal({
-    // 						title:"太火爆了！",
-    // 						content:"请重试一遍",
-    // 						showCancel:false,
-    // 						success(res) {
-    // 							// if (res.confirm) {
-    // 							// 	that.analyze_img(tempFilePaths)
-    // 							// }
-    // 						}
-    // 					})
-    // 					console.error("Error calling API:", response);
-    // 				} else {
-    // 					// Process the response data as needed
-    // 					this.originalText = response.data.data.content
-    // 					// this.startDisplay()
-    // 					this.processText();
-    // 				}
-    // 			}
-    // 		} catch (error) {
-    // 			console.error("API call failed:", error);
-    // 		} finally {
-    // 			uni.hideLoading()
-    // 		}
-    // 	},
+    click_tabbar: function click_tabbar(res) {
+      // console.log(res)
+    }
   }
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

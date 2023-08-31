@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['e0',['$event']]]]]}}" class="item" bindtap="__e"><view style="display:flex;align-items:center;gap:203px;"><view class="item_text">{{title}}</view><image src="/static/Rectangle_2.svg"></image></view><u-line vue-id="7a8a95c2-1" bind:__l="__l"></u-line></view></view>
