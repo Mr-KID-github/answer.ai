@@ -5,8 +5,10 @@
 		<view style="margin-top:10px; width: 100%; padding-left: 40px; background: transparent; margin-bottom: 30px;">
 			<u-tabs :list="list1"></u-tabs>
 		</view>
-
 		
+		
+		
+
 		<view class="conten_frame">
 			<!-- 拍照搜题 -->
 			<view class="button_item" @click="chooseAndUploadImage">
@@ -19,38 +21,19 @@
 			
 			<!-- 提问框 -->
 			<view class="response_result" v-if="work_image">
-				<image :src="work_image"></image>
+				<image mode="widthFix" :src="work_image" @error="handleImageError"></image>
 			</view>
 			
-			<!-- 提问框 -->
-			<!-- <view class="response_result" :style="gpt_answer?'width: 500rpx;':''">
-				<image v-if="!gpt_answer" src="https://s3-alpha-sig.figma.com/img/46b9/ef5f/b5b166af39d5cf7d66c8cda918d6278c?Expires=1690156800&Signature=S8SSJ3JtrxTTwwlF-YFDyacPqAIdvJaOz-b-l4mjgT~~p~Fqhfsqcls~0t~0tiC2hLjTb3HTlJsJo2BcUjmtEfEm-1W0h4dB8dXPDhM5CnqqLl5arNPFYWihsBUvqlboUDI2m~VbkfGit7rS95uRByXHxKL53i9BM1hgRJt~TshEpQBhZJqKf8PzC37Y5EPXpt3VD858dKmhD3U5tHYjzJR0~GwFcwHnACzqDW1V6B-MnrHUZz1eYgeD1A3YvbxyhpZ~~G0CM71hZVOa8WHk39UgvS9v3C9I8Fp-2Xs~RVQlACtsSlIq6MRMgE-t~3iFXkg9qxm~qOcfevrAjXAj9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"></image>
-				<text v-if="gpt_answer">{{gpt_answer}}</text>
-			</view> -->
-			
 			<!-- 标题框架:Chat Test -->
-			<view class="title_frame" v-if="originalText.length != 0">
+			<view class="title_frame" v-if="parts.length != 0">
 				<text class="title_2">解析题目数据</text>
 				<view v-for="(part, index) in parts">
-				    <text v-if="!isLatex(part)" :key="'text-' + index">{{ parts[index] }}</text>
-				    <image style="" mode="widthFix" v-else :key="'image-' + index" :src="parts[index]"/>
+				    <view v-if="!isLatex(part)">{{ parts[index] }}</view>
+					<view v-else style="width: 303px; height: 202px;" :style="isLatex(part) ? latexBackground(part) : ''"></view>
 				</view>
 				<!-- <text class="title_2">{{ analyze_math_data }}</text> -->
 			</view>
 				
-			<!-- 标题框架:Chat Test -->
-			<view class="title_frame" v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
-				<text class="title_1">深入交流</text>
-				<text class="title_2">如果有不懂的地方继续提问吧~</text>
-			</view>
-			
-			<!-- 提问框 -->
-			<view v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
-				<custom_input></custom_input>
-			</view>
-			<view class="title_frame" v-if="analyze_math_data.length == originalText.length && originalText.length != 0">
-				<text class="title_2">你好呀！很高兴见到你。有什么我可以帮助你的吗？</text>
-			</view>
 		</view>
 					
 		<!-- 底部 -->			
@@ -84,7 +67,7 @@
 					text1: '快加入学习群',
 					gpt_answer: 'Hello',
 					work_image:"",
-					originalText: "",
+					// originalText: "",
 					analyze_math_data: "",
 					currentCharIndex: 0,
 					parts: []
@@ -94,50 +77,63 @@
 				// const MathJax = require('mathjax');
 			},
 			methods: {
+				latexBackground(svgData) {
+				    return `background-image: url(${svgData}); background-size: cover;`;
+				},
+				handleImageError(e) {
+				        console.log('Image loading error:', e);
+				    },
 				isLatex(part) {
-					console.log(part)
-					if (typeof part === 'string') {
-						if (part.startsWith('$') && part.endsWith('$')) {
+				    console.log("isLatex:",part);
+				    if (typeof part === 'string') {
+				        // // 检查是否是 LaTeX 公式的文本表示
+				        // if (part.startsWith('$') && part.endsWith('$')) {
+				        //     return true;
+				        // }
+				        // // 检查是否是 PNG 图像的 Base64 编码数据
+				        // if (part.startsWith("data:image/png;base64")) {
+				        //     return true;
+				        // }
+				        // 检查是否是 SVG 图像的 Base64 编码数据
+				        if (part.startsWith("data:image/svg+xml;base64")) {
+							console.log("part是svg")
 							return true;
-						}
-						if (part.startsWith("data:image/png;base64")) {
-							return true;
-						}
-					}
-					return false;
+				        }
+				    }
+				    return false;
 				},
-				async getLatexImageUrl(formula,index) {
-					// console.log("之前的this.parts[index]：",this.parts[index])
-					// console.log(formula)
-				    let response = await uni.request({
-				        url: getApp().globalData.server + '/latex',
-				        method: 'POST',
-				        data: {
-				            formula: formula
-				        },
-				        responseType: 'arraybuffer'  // 这确保你获取的是一个字节流
-				    });
+				// async getLatexImageUrl(formula,index) {
+				// 	// console.log("之前的this.parts[index]：",this.parts[index])
+				// 	// console.log(formula)
+				//     let response = await uni.request({
+				//         url: getApp().globalData.server + '/latex',
+				//         method: 'POST',
+				//         data: {
+				//             formula: formula
+				//         },
+				//         responseType: 'arraybuffer'  // 这确保你获取的是一个字节流
+				//     });
 					
-				    // 将字节流转换为 data URL 以在前端显示
-				    console.log(response);
-				    const base64Data = uni.arrayBufferToBase64(response.data);
-				    const dataUrl = "data:image/png;base64," + base64Data;
-					// console.log(dataUrl)
-					// Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
-					// 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
-					// this.parts[index] = dataUrl
-					this.$set(this.parts, index, dataUrl);
-					// console.log("之后的this.parts[index]：",this.parts[index])
-				},
-				async processText() {
-					// 使用正则表达式拆分文本
-					this.parts = this.originalText.split(/(\$\$?.+?\$\$?)/);
-					for (let i = 0; i < this.parts.length; i++) {
-						if (this.isLatex(this.parts[i])) {
-							this.getLatexImageUrl(this.parts[i],i);
-						}
-					}
-				},
+				//     // 将字节流转换为 data URL 以在前端显示
+				//     console.log(response);
+				//     const base64Data = uni.arrayBufferToBase64(response.data);
+				//     const dataUrl = "data:image/png;base64," + base64Data;
+				// 	// console.log(dataUrl)
+				// 	// Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
+				// 	// 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
+				// 	// this.parts[index] = dataUrl
+				// 	this.$set(this.parts, index, dataUrl);
+				// 	// console.log("之后的this.parts[index]：",this.parts[index])
+				// },
+				// async processText() {
+				// 	// 使用正则表达式拆分文本
+				// 	this.parts = this.originalText.split(/(\$\$?.+?\$\$?)/);
+				// 	for (let i = 0; i < this.parts.length; i++) {
+				// 		if (this.isLatex(this.parts[i])) {
+				// 			this.getLatexImageUrl(this.parts[i],i);
+				// 		}
+				// 	}
+				// },
 				// 逐字显示
 				displayTextByChar() {
 					if (this.currentCharIndex < this.originalText.length) {
@@ -157,11 +153,18 @@
 					        count: 1, // 可选择的图片数量，这里设置为1表示每次只能选择一张图片
 					        sourceType: ['album', 'camera'], // 图片的来源，可以是相册或相机
 					        success: (res) => {
-					          const tempFilePaths = res.tempFilePaths; // 选择的图片临时文件路径
-							  that.work_image = tempFilePaths
+							  const tempFilePath = res.tempFilePaths[0];	// 选择的图片临时文件路径
+							  uni.getFileSystemManager().readFile({
+								  filePath: tempFilePath,
+								  encoding: 'base64',
+								  success: (readFileRes) => {
+									  const base64Data = 'data:image/jpeg;base64,' + readFileRes.data;
+									  that.work_image = base64Data;
+									  // console.log("that.work_image:",that.work_image)
+								  }
+							  });
 					          // 处理选择的图片逻辑，比如上传到服务器等
-							  console.log(tempFilePaths)
-							  that.upload_img_to_server(tempFilePaths[0])
+							  that.upload_img_to_server(res.tempFilePaths[0])
 					        },
 					        fail: (err) => {
 					          console.log(err)
@@ -170,98 +173,105 @@
 				},
 			
 				upload_img_to_server(filePath) {
-					console.log("调用upload_img_to_server")
-				    uni.uploadFile({
-				        url: getApp().globalData.server + '/upload',
+					console.log("调用upload_img_to_server,现在已经改为调用use_mathAPI")
+				    uni.showLoading({
+						title: "解析中..."
+					})
+					uni.uploadFile({
+				        url: getApp().globalData.server + '/use_mathAPI',
 				        filePath: filePath,
 				        name: "image",
 				        success: (res) => {
 							console.log(res)
-				            let data = res.data
-				            if (data) {
-								console.log("图片上传成功")
-				                uni.showToast({
-				                    title: 'Upload successful',
-				                    icon: 'success'
-				                });
-								console.log("开始图片解析")
-								this.analyze_img(data)
-				            } else {
-				                uni.showToast({
-				                    title: 'Upload failed',
-				                    icon: 'none'
-				                });
-				            }
+							if (res.statusCode == 200) {
+								const dataArray = JSON.parse(res.data);
+								this.parts = dataArray
+								console.log(this.parts);
+							}
+				            else {
+								uni.showModal({
+									title:"测试弹窗",
+									content:"statusCode:" + res.statusCode,
+									showCancel: false
+								})
+							}
+							
 				        },
 				        fail: () => {
 				            uni.showToast({
 				                title: 'Server error',
 				                icon: 'none'
 				            });
-				        }
+				        },
+						complete() {
+							uni.hideLoading()
+						}
 				    });
 				},
-				async analyze_img(tempFilePaths){
-					// 使用uni.uploadFile上传图片至云服务器
-					console.log(tempFilePaths)
-					const apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
-					const header = {
-						"x-app-id": "math-app",
-						"x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
-						"Content-Type": "application/json" // Assuming the API expects JSON content type
-					};
-					const data = {
-						stream: false,
-						url: tempFilePaths
-					};
+				
+			// 	async analyze_img(tempFilePaths){
+			// 		// 使用uni.uploadFile上传图片至云服务器
+			// 		console.log(tempFilePaths)
+			// 		const apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
+			// 		const header = {
+			// 			"x-app-id": "math-app",
+			// 			"x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
+			// 			"Content-Type": "application/json" // Assuming the API expects JSON content type
+			// 		};
+			// 		const data = {
+			// 			stream: false,
+			// 			url: tempFilePaths
+			// 		};
 					
-					var that = this
-					try {
-						uni.showLoading({
-							title: "解析中..."
-						})
-						console.log("开始调用数学题扫描解答")
-						const response = await uni.request({
-							url: apiUrl,
-							method: "POST",
-							header: header,
-							data: data
-						});
+			// 		var that = this
+			// 		try {
+			// 			uni.showLoading({
+			// 				title: "解析中..."
+			// 			})
+			// 			console.log("开始调用数学题扫描解答")
+			// 			const response = await uni.request({
+			// 				url: apiUrl,
+			// 				method: "POST",
+			// 				header: header,
+			// 				data: data
+			// 			});
 			
-						if (response.statusCode === 200) {
-							console.log("API response:", response.data);
-							if (response.data.msg == 'invalid image') {
-								uni.showModal({
-									title:"太火爆了！",
-									content:"请重试一遍",
-									showCancel:false,
-									success(res) {
-										// if (res.confirm) {
-										// 	that.analyze_img(tempFilePaths)
-										// }
-									}
-								})
-								console.error("Error calling API:", response);
-							} else {
-								// Process the response data as needed
-								this.originalText = response.data.data.content
-								// this.startDisplay()
-								this.processText();
-							}
-						}
-					} catch (error) {
-						console.error("API call failed:", error);
-					} finally {
-						uni.hideLoading()
-					}
+			// 			if (response.statusCode === 200) {
+			// 				console.log("API response:", response.data);
+			// 				if (response.data.msg == 'invalid image') {
+			// 					uni.showModal({
+			// 						title:"太火爆了！",
+			// 						content:"请重试一遍",
+			// 						showCancel:false,
+			// 						success(res) {
+			// 							// if (res.confirm) {
+			// 							// 	that.analyze_img(tempFilePaths)
+			// 							// }
+			// 						}
+			// 					})
+			// 					console.error("Error calling API:", response);
+			// 				} else {
+			// 					// Process the response data as needed
+			// 					this.originalText = response.data.data.content
+			// 					// this.startDisplay()
+			// 					this.processText();
+			// 				}
+			// 			}
+			// 		} catch (error) {
+			// 			console.error("API call failed:", error);
+			// 		} finally {
+			// 			uni.hideLoading()
+			// 		}
 					
-				},
+			// 	},
+			
 			}
 	    }
 </script>
 
 	
 <style>
+	
 	 .bottom-section {
 	        position: absolute;
 	        bottom: 0;
@@ -397,13 +407,15 @@
 		letter-spacing: -0.4px;
 	}
 	.response_result{
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			background-color: #f8f8f8;
+		width: 303px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		background-color: #f8f8f8;
 	}
 	
 	.response_result image{
 		border-radius: 10px;
+		width: 100%;
 	}
 </style>

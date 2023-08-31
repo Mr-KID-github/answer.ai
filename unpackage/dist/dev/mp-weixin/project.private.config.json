@@ -3,6 +3,6 @@
   "projectname": "answer.ai",
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": false
+    "urlCheck": true
   }
 }

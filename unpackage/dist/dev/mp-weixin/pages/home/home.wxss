@@ -136,12 +136,14 @@
 		letter-spacing: -0.4px;
 }
 .response_result{
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			background-color: #f8f8f8;
+		width: 303px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		background-color: #f8f8f8;
 }
 .response_result image{
 		border-radius: 10px;
+		width: 100%;
 }
 

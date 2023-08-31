@@ -101,16 +101,13 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 176))
-    },
-    custom_input: function () {
-      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 184))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 203))
     },
     uTabbar: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 189))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 211))
     },
     uTabbarItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 197))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 219))
     },
   }
 } catch (e) {
@@ -134,27 +131,22 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.originalText.length
+  var g0 = _vm.parts.length
   var l0 =
     g0 != 0
       ? _vm.__map(_vm.parts, function (part, index) {
           var $orig = _vm.__get_orig(part)
           var m0 = _vm.isLatex(part)
+          var m1 = !!m0 ? _vm.isLatex(part) : null
+          var m2 = !!m0 && m1 ? _vm.latexBackground(part) : null
           return {
             $orig: $orig,
             m0: m0,
+            m1: m1,
+            m2: m2,
           }
         })
       : null
-  var g1 =
-    _vm.analyze_math_data.length == _vm.originalText.length &&
-    _vm.originalText.length != 0
-  var g2 =
-    _vm.analyze_math_data.length == _vm.originalText.length &&
-    _vm.originalText.length != 0
-  var g3 =
-    _vm.analyze_math_data.length == _vm.originalText.length &&
-    _vm.originalText.length != 0
   if (!_vm._isMounted) {
     _vm.e0 = function (name) {
       return (_vm.value6 = name)
@@ -166,9 +158,6 @@ var render = function () {
       $root: {
         g0: g0,
         l0: l0,
-        g1: g1,
-        g2: g2,
-        g3: g3,
       },
     }
   )
@@ -207,30 +196,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -299,7 +268,7 @@ var _default = {
       text1: '快加入学习群',
       gpt_answer: 'Hello',
       work_image: "",
-      originalText: "",
+      // originalText: "",
       analyze_math_data: "",
       currentCharIndex: 0,
       parts: []
@@ -309,77 +278,62 @@ var _default = {
     // const MathJax = require('mathjax');
   },
   methods: {
+    latexBackground: function latexBackground(svgData) {
+      return "background-image: url(".concat(svgData, "); background-size: cover;");
+    },
+    handleImageError: function handleImageError(e) {
+      console.log('Image loading error:', e);
+    },
     isLatex: function isLatex(part) {
-      console.log(part);
+      console.log("isLatex:", part);
       if (typeof part === 'string') {
-        if (part.startsWith('$') && part.endsWith('$')) {
-          return true;
-        }
-        if (part.startsWith("data:image/png;base64")) {
+        // // 检查是否是 LaTeX 公式的文本表示
+        // if (part.startsWith('$') && part.endsWith('$')) {
+        //     return true;
+        // }
+        // // 检查是否是 PNG 图像的 Base64 编码数据
+        // if (part.startsWith("data:image/png;base64")) {
+        //     return true;
+        // }
+        // 检查是否是 SVG 图像的 Base64 编码数据
+        if (part.startsWith("data:image/svg+xml;base64")) {
+          console.log("part是svg");
           return true;
         }
       }
       return false;
     },
-    getLatexImageUrl: function getLatexImageUrl(formula, index) {
-      var _this = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        var response, base64Data, dataUrl;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return uni.request({
-                  url: getApp().globalData.server + '/latex',
-                  method: 'POST',
-                  data: {
-                    formula: formula
-                  },
-                  responseType: 'arraybuffer' // 这确保你获取的是一个字节流
-                });
-              case 2:
-                response = _context.sent;
-                // 将字节流转换为 data URL 以在前端显示
-                console.log(response);
-                base64Data = uni.arrayBufferToBase64(response.data);
-                dataUrl = "data:image/png;base64," + base64Data; // console.log(dataUrl)
-                // Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
-                // 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
-                // this.parts[index] = dataUrl
-                _this.$set(_this.parts, index, dataUrl);
-                // console.log("之后的this.parts[index]：",this.parts[index])
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }))();
-    },
-    processText: function processText() {
-      var _this2 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-        var i;
-        return _regenerator.default.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                // 使用正则表达式拆分文本
-                _this2.parts = _this2.originalText.split(/(\$\$?.+?\$\$?)/);
-                for (i = 0; i < _this2.parts.length; i++) {
-                  if (_this2.isLatex(_this2.parts[i])) {
-                    _this2.getLatexImageUrl(_this2.parts[i], i);
-                  }
-                }
-              case 2:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2);
-      }))();
-    },
+    // async getLatexImageUrl(formula,index) {
+    // 	// console.log("之前的this.parts[index]：",this.parts[index])
+    // 	// console.log(formula)
+    //     let response = await uni.request({
+    //         url: getApp().globalData.server + '/latex',
+    //         method: 'POST',
+    //         data: {
+    //             formula: formula
+    //         },
+    //         responseType: 'arraybuffer'  // 这确保你获取的是一个字节流
+    //     });
+    //     // 将字节流转换为 data URL 以在前端显示
+    //     console.log(response);
+    //     const base64Data = uni.arrayBufferToBase64(response.data);
+    //     const dataUrl = "data:image/png;base64," + base64Data;
+    // 	// console.log(dataUrl)
+    // 	// Vue 在处理数组更新时，可能不会检测到数组内部的变化，尤其是直接通过索引修改数组元素的情况。当你直接使用 this.parts[index] = dataUrl 进行更新时，Vue 可能不会认为 parts 发生了变化，因此不会重新渲染 DOM。
+    // 	// 为了解决这个问题，你应该使用 Vue 的 this.$set 方法来更新数组元素。这会确保 Vue 知道数组发生了变化并触发重新渲染。
+    // 	// this.parts[index] = dataUrl
+    // 	this.$set(this.parts, index, dataUrl);
+    // 	// console.log("之后的this.parts[index]：",this.parts[index])
+    // },
+    // async processText() {
+    // 	// 使用正则表达式拆分文本
+    // 	this.parts = this.originalText.split(/(\$\$?.+?\$\$?)/);
+    // 	for (let i = 0; i < this.parts.length; i++) {
+    // 		if (this.isLatex(this.parts[i])) {
+    // 			this.getLatexImageUrl(this.parts[i],i);
+    // 		}
+    // 	}
+    // },
     // 逐字显示
     displayTextByChar: function displayTextByChar() {
       if (this.currentCharIndex < this.originalText.length) {
@@ -401,11 +355,18 @@ var _default = {
         sourceType: ['album', 'camera'],
         // 图片的来源，可以是相册或相机
         success: function success(res) {
-          var tempFilePaths = res.tempFilePaths; // 选择的图片临时文件路径
-          that.work_image = tempFilePaths;
+          var tempFilePath = res.tempFilePaths[0]; // 选择的图片临时文件路径
+          uni.getFileSystemManager().readFile({
+            filePath: tempFilePath,
+            encoding: 'base64',
+            success: function success(readFileRes) {
+              var base64Data = 'data:image/jpeg;base64,' + readFileRes.data;
+              that.work_image = base64Data;
+              // console.log("that.work_image:",that.work_image)
+            }
+          });
           // 处理选择的图片逻辑，比如上传到服务器等
-          console.log(tempFilePaths);
-          that.upload_img_to_server(tempFilePaths[0]);
+          that.upload_img_to_server(res.tempFilePaths[0]);
         },
         fail: function fail(err) {
           console.log(err);
@@ -413,27 +374,26 @@ var _default = {
       });
     },
     upload_img_to_server: function upload_img_to_server(filePath) {
-      var _this3 = this;
-      console.log("调用upload_img_to_server");
+      var _this = this;
+      console.log("调用upload_img_to_server,现在已经改为调用use_mathAPI");
+      uni.showLoading({
+        title: "解析中..."
+      });
       uni.uploadFile({
-        url: getApp().globalData.server + '/upload',
+        url: getApp().globalData.server + '/use_mathAPI',
         filePath: filePath,
         name: "image",
         success: function success(res) {
           console.log(res);
-          var data = res.data;
-          if (data) {
-            console.log("图片上传成功");
-            uni.showToast({
-              title: 'Upload successful',
-              icon: 'success'
-            });
-            console.log("开始图片解析");
-            _this3.analyze_img(data);
+          if (res.statusCode == 200) {
+            var dataArray = JSON.parse(res.data);
+            _this.parts = dataArray;
+            console.log(_this.parts);
           } else {
-            uni.showToast({
-              title: 'Upload failed',
-              icon: 'none'
+            uni.showModal({
+              title: "测试弹窗",
+              content: "statusCode:" + res.statusCode,
+              showCancel: false
             });
           }
         },
@@ -442,83 +402,63 @@ var _default = {
             title: 'Server error',
             icon: 'none'
           });
+        },
+        complete: function complete() {
+          uni.hideLoading();
         }
       });
-    },
-    analyze_img: function analyze_img(tempFilePaths) {
-      var _this4 = this;
-      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3() {
-        var apiUrl, header, data, that, response;
-        return _regenerator.default.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                // 使用uni.uploadFile上传图片至云服务器
-                console.log(tempFilePaths);
-                apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
-                header = {
-                  "x-app-id": "math-app",
-                  "x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
-                  "Content-Type": "application/json" // Assuming the API expects JSON content type
-                };
-                data = {
-                  stream: false,
-                  url: tempFilePaths
-                };
-                that = _this4;
-                _context3.prev = 5;
-                uni.showLoading({
-                  title: "解析中..."
-                });
-                console.log("开始调用数学题扫描解答");
-                _context3.next = 10;
-                return uni.request({
-                  url: apiUrl,
-                  method: "POST",
-                  header: header,
-                  data: data
-                });
-              case 10:
-                response = _context3.sent;
-                if (response.statusCode === 200) {
-                  console.log("API response:", response.data);
-                  if (response.data.msg == 'invalid image') {
-                    uni.showModal({
-                      title: "太火爆了！",
-                      content: "请重试一遍",
-                      showCancel: false,
-                      success: function success(res) {
-                        // if (res.confirm) {
-                        // 	that.analyze_img(tempFilePaths)
-                        // }
-                      }
-                    });
-                    console.error("Error calling API:", response);
-                  } else {
-                    // Process the response data as needed
-                    _this4.originalText = response.data.data.content;
-                    // this.startDisplay()
-                    _this4.processText();
-                  }
-                }
-                _context3.next = 17;
-                break;
-              case 14:
-                _context3.prev = 14;
-                _context3.t0 = _context3["catch"](5);
-                console.error("API call failed:", _context3.t0);
-              case 17:
-                _context3.prev = 17;
-                uni.hideLoading();
-                return _context3.finish(17);
-              case 20:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3, null, [[5, 14, 17, 20]]);
-      }))();
-    }
+    } // 	async analyze_img(tempFilePaths){
+    // 		// 使用uni.uploadFile上传图片至云服务器
+    // 		console.log(tempFilePaths)
+    // 		const apiUrl = "https://math.rockeyops.com/api/v1/math/solve";
+    // 		const header = {
+    // 			"x-app-id": "math-app",
+    // 			"x-app-key": "7a6c508f25324c3d36c46c409c4f7f2b",
+    // 			"Content-Type": "application/json" // Assuming the API expects JSON content type
+    // 		};
+    // 		const data = {
+    // 			stream: false,
+    // 			url: tempFilePaths
+    // 		};
+    // 		var that = this
+    // 		try {
+    // 			uni.showLoading({
+    // 				title: "解析中..."
+    // 			})
+    // 			console.log("开始调用数学题扫描解答")
+    // 			const response = await uni.request({
+    // 				url: apiUrl,
+    // 				method: "POST",
+    // 				header: header,
+    // 				data: data
+    // 			});
+    // 			if (response.statusCode === 200) {
+    // 				console.log("API response:", response.data);
+    // 				if (response.data.msg == 'invalid image') {
+    // 					uni.showModal({
+    // 						title:"太火爆了！",
+    // 						content:"请重试一遍",
+    // 						showCancel:false,
+    // 						success(res) {
+    // 							// if (res.confirm) {
+    // 							// 	that.analyze_img(tempFilePaths)
+    // 							// }
+    // 						}
+    // 					})
+    // 					console.error("Error calling API:", response);
+    // 				} else {
+    // 					// Process the response data as needed
+    // 					this.originalText = response.data.data.content
+    // 					// this.startDisplay()
+    // 					this.processText();
+    // 				}
+    // 			}
+    // 		} catch (error) {
+    // 			console.error("API call failed:", error);
+    // 		} finally {
+    // 			uni.hideLoading()
+    // 		}
+    // 	},
   }
 };
 exports.default = _default;
