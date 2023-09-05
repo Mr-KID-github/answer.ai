@@ -1,0 +1,1 @@
+<uni-shadow-root class="towxml-latex-latex" vue-id="0262e9f6-1" bind:__l="__l" vue-slots="{{['default']}}"><image class="{{[attr.class]}}" style="{{('width:'+size.w+'em; height:'+size.h+'em;')}}" lazy-load="true" src="{{attr.src}}" data-event-opts="{{[['load',[['load',['$event']]]]]}}" bindload="__e"></image></uni-shadow-root>

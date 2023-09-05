@@ -6,7 +6,6 @@
     "home_component": "/components/home_component/home_component",
     "mine": "/components/mine/mine",
     "u-tabbar": "/uni_modules/uview-ui/components/u-tabbar/u-tabbar",
-    "u-tabbar-item": "/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item",
-    "htmltowxml": "/wxcomponents/towxml/htmltowxml"
+    "u-tabbar-item": "/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item"
   }
 }

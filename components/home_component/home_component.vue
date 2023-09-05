@@ -15,23 +15,27 @@
 		</view>
 		
 		<!-- 标题框架:Chat Test -->
-		<view class="title_frame" v-if="parts.length != 0">
+		<view class="title_frame" v-if="markdownData">
 			<text class="title_2">解析题目数据</text>
-			<view v-for="(part, index) in parts" class="combined-text">
-			    <view v-if="!isLatex(part)" class="answer_text">{{ parts[index] }}</view>
-				<image v-else style="width: 200px;height: 200px;" :style="isLatex(part) ? latexBackground(part) : ''"></image>
-			</view>
+			<joMarkdown :nodes="markdownData"></joMarkdown>
 		</view>
 	</view>
 </template>
 
 <script>
+	import markdownFunc from '@/uni_modules/jo-markdown/components/jo-markdown/index.js';
+	import joMarkdown from '@/uni_modules/jo-markdown/components/jo-markdown/decode.vue';
+	
 	export default {
 		name:"home_component",
+		components: {
+			joMarkdown  // 这里使用了上面导入的名称
+		},
 		data() {
 			return {
 				work_image:"",
-				parts: []
+				// parts: []
+				markdownData: {},
 			};
 		},
 		methods: {
@@ -76,7 +80,6 @@
 				        }
 				});
 			},
-						
 			upload_img_to_server(filePath) {
 				console.log("调用upload_img_to_server,现在已经改为调用use_mathAPI")
 			    uni.showLoading({
@@ -89,9 +92,8 @@
 			        success: (res) => {
 						console.log(res)
 						if (res.statusCode == 200) {
-							const dataArray = JSON.parse(res.data);
-							this.parts = dataArray
-							console.log(this.parts);
+							console.log("解析出来的数据如下：\n",res.data)
+							this.markdownData = markdownFunc(res.data,"markdown");
 						}
 			            else {
 							uni.showModal({

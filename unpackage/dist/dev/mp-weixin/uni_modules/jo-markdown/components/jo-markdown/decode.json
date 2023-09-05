@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "decode": "/uni_modules/jo-markdown/components/jo-markdown/decode",
+    "audio-player": "/uni_modules/jo-markdown/components/jo-markdown/audio-player/audio-player",
+    "latex": "/uni_modules/jo-markdown/components/jo-markdown/latex/latex",
+    "rtable": "/uni_modules/jo-markdown/components/jo-markdown/table/table",
+    "todogroup": "/uni_modules/jo-markdown/components/jo-markdown/todogroup/todogroup",
+    "yuml": "/uni_modules/jo-markdown/components/jo-markdown/yuml/yuml",
+    "img": "/uni_modules/jo-markdown/components/jo-markdown/img/img"
+  }
+}

@@ -9,31 +9,31 @@
 		    "style" :                                                                                    
 		    {
 		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false,
-				"mp-weixin": {
-						"usingComponents": {
-							"htmltowxml": "/wxcomponents/towxml/htmltowxml"
-						}
-					}
+		        "enablePullDownRefresh": false
 		    }
 			
 		    
 		},
+		{
+		    "path" : "pages/test/test",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    },
+			"usingComponents": {
+			  	"towxml": "/wxcomponents/towxml/towxml"
+			  }
+		    
+		},
+
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-        ,{
-            "path" : "pages/test/test",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+        
         ,{
             "path" : "pages/mine/mine",
             "style" :                                                                                    

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "decode": "/uni_modules/jo-markdown/components/jo-markdown/decode"
+  }
+}

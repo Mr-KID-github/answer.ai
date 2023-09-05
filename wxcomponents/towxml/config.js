@@ -236,19 +236,19 @@ module.exports = {
         'rich-text',
 
         // 可以解析的标签（html或markdown中会很少使用）
-        // 'canvas',
-        // 'map',
-        // 'slider',
-        // 'scroll-view',
-        // 'movable-area',
-        // 'movable-view',
-        // 'progress',
-        // 'label',
-        // 'switch',
-        // 'picker',
-        // 'picker-view',
-        // 'switch',
-        // 'contact-button'
+        'canvas',
+        'map',
+        'slider',
+        'scroll-view',
+        'movable-area',
+        'movable-view',
+        'progress',
+        'label',
+        'switch',
+        'picker',
+        'picker-view',
+        'switch',
+        'contact-button'
     ],
 
     // 自定义组件

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "jo-markdown": "/uni_modules/jo-markdown/components/jo-markdown/decode"
+  }
 }
