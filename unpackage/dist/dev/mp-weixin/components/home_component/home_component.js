@@ -104,6 +104,19 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.deep_answer_data.length
+  var g1 = _vm.deep_answer_data.length
+  var g2 = _vm.deep_answer_data.length
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+        g1: g1,
+        g2: g2,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -199,27 +212,13 @@ var _default = {
       work_image: "",
       // parts: []
       markdownData: {},
-      deep_answer_data: []
+      deep_answer_data: [],
+      // 开始提问
+      is_ask: false,
+      markdownData_ask_deep: {}
     };
   },
   methods: {
-    latexBackground: function latexBackground(svgData) {
-      return "background-image: url(".concat(svgData, "); background-size: cover;");
-    },
-    handleImageError: function handleImageError(e) {
-      console.log('Image loading error:', e);
-    },
-    isLatex: function isLatex(part) {
-      console.log("isLatex:", part);
-      if (typeof part === 'string') {
-        // 检查是否是 SVG 图像的 Base64 编码数据
-        if (part.startsWith("data:image/svg+xml;base64")) {
-          console.log("part是svg");
-          return true;
-        }
-      }
-      return false;
-    },
     chooseAndUploadImage: function chooseAndUploadImage() {
       var that = this;
       uni.chooseImage({
@@ -249,12 +248,13 @@ var _default = {
     // 处理提问框提出问题
     handleAskData: function handleAskData(data) {
       console.log("处理提问框提出问题：", data);
+
       // 将其添加到深入提问数组
       this.deep_answer_data.push({
         "content": "",
         "question": data
       });
-      console.log(this.deep_answer_data);
+      console.log("将提问框提出问题放入数组中", this.deep_answer_data);
       this.deep_ask_answer();
     },
     // 深入提问数学题目
@@ -274,11 +274,11 @@ var _default = {
         success: function success(res) {
           console.log(res);
           var content = res.data.data.content;
+          console.log(content);
           try {
-            console.log(_this.deep_answer_data);
-            if (_this.deep_answer_data[-1].question && _this.deep_answer_data[-1].content) {
-              _this.deep_answer_data[-1].content = content;
-            }
+            _this.deep_answer_data[_this.deep_answer_data.length - 1].content = content;
+            _this.markdownData_ask_deep = (0, _index.default)(content, "markdown");
+            _this.is_ask = true;
           } catch (e) {
             // 删除this.deep_answer_data最后一个对象
             _this.deep_answer_data.pop();
@@ -311,6 +311,7 @@ var _default = {
             console.log("解析出来的数据如下：\n", JSON.parse(res.data));
             var content = JSON.parse(res.data).content;
             var question = JSON.parse(res.data).question;
+
             // 赋值问题和答案方便传递给chatgpt深入回答
             _this2.deep_answer_data = []; // 初始化数组
             _this2.deep_answer_data.push({

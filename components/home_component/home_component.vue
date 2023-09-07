@@ -15,23 +15,23 @@
 		</view>
 		
 		<!-- 标题框架:Chat Test -->
-		<view class="title_frame" v-if="markdownData">
-			<text class="title_2">解析题目数据</text>
+		<view class="title_frame" v-if="deep_answer_data.length">
+			<text class="title_1">解析题目数据</text>
 			<joMarkdown :nodes="markdownData"></joMarkdown>
 		</view>
 		
 		<!-- 标题框架:Chat Test -->
-		<view class="title_frame" v-if="markdownData">
+		<view class="title_frame" v-if="deep_answer_data.length">
 			<text class="title_1">深入交流</text>
 			<text class="title_2">如果有不懂的地方继续提问吧~</text>
 		</view>
 		
 		<!-- 提问框 -->
-		<view v-if="markdownData" class="frame">
+		<view v-if="deep_answer_data.length" class="frame">
 			<custom_input @click_ask="handleAskData"></custom_input>
-			<view class="title_frame">
-				<text class="title_2">你好呀！很高兴见到你。有什么我可以帮助你的吗？</text>
-				<text class="title_2">{{deep_answer_data[-1].content}}</text>
+			<view class="title_frame" v-if="is_ask">
+				<!-- <text class="title_2">你好呀！很高兴见到你。有什么我可以帮助你的吗？</text> -->
+				<joMarkdown :nodes="markdownData_ask_deep"></joMarkdown>
 			</view>
 		</view>
 	</view>
@@ -51,27 +51,13 @@
 				work_image:"",
 				// parts: []
 				markdownData: {},
-				deep_answer_data: []
+				deep_answer_data: [],
+				// 开始提问
+				is_ask: false,
+				markdownData_ask_deep: {}
 			};
 		},
 		methods: {
-			latexBackground(svgData) {
-			    return `background-image: url(${svgData}); background-size: cover;`;
-			},
-			handleImageError(e) {
-				console.log('Image loading error:', e);
-			},
-			isLatex(part) {
-			    console.log("isLatex:",part);
-			    if (typeof part === 'string') {
-			        // 检查是否是 SVG 图像的 Base64 编码数据
-			        if (part.startsWith("data:image/svg+xml;base64")) {
-						console.log("part是svg")
-						return true;
-			        }
-			    }
-			    return false;
-			},
 			chooseAndUploadImage() {
 				var that = this
 				uni.chooseImage({
@@ -99,12 +85,13 @@
 			// 处理提问框提出问题
 			handleAskData(data){
 				console.log("处理提问框提出问题：",data)
+				
 				// 将其添加到深入提问数组
 				this.deep_answer_data.push({
 					"content": "",
 					"question": data
 				})
-				console.log(this.deep_answer_data)
+				console.log("将提问框提出问题放入数组中",this.deep_answer_data)
 				this.deep_ask_answer()
 			},
 			// 深入提问数学题目
@@ -122,12 +109,11 @@
 					success: (res) => {
 						console.log(res);
 						const content = res.data.data.content
-						
+						console.log(content)
 						try{
-							console.log(this.deep_answer_data)
-							if (this.deep_answer_data[-1].question && this.deep_answer_data[-1].content) {
-								this.deep_answer_data[-1].content = content
-							}
+							this.deep_answer_data[this.deep_answer_data.length - 1].content = content
+							this.markdownData_ask_deep = markdownFunc(content,"markdown")
+							this.is_ask = true
 						}catch(e){
 							// 删除this.deep_answer_data最后一个对象
 							this.deep_answer_data.pop();
@@ -159,6 +145,7 @@
 							console.log("解析出来的数据如下：\n",JSON.parse(res.data))
 							const content = JSON.parse(res.data).content
 							const question = JSON.parse(res.data).question
+							
 							// 赋值问题和答案方便传递给chatgpt深入回答
 							this.deep_answer_data = []		// 初始化数组
 							this.deep_answer_data.push({
@@ -213,6 +200,8 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 20px;
+		padding-bottom: 50px; /* 假设底部导航栏的高度为50px */
+
 	}
 	.combined-text{
 		display: inline-flex;
