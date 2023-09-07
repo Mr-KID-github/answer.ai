@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
+    "custom_input": "/components/custom_input/custom_input",
     "jo-markdown": "/uni_modules/jo-markdown/components/jo-markdown/decode"
   }
 }

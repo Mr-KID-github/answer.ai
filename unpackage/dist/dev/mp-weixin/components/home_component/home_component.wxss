@@ -1,4 +1,22 @@
 
+.title_1{
+		color: var(--gray-900, #18181B);
+		-webkit-font-feature-settings: 'clig' off, 'liga' off;
+		        font-feature-settings: 'clig' off, 'liga' off;
+		font-family: Manrope;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 30px; /* 136.364% */
+		letter-spacing: -0.4px;
+}
+.frame{
+		display: flex;
+		width: 343px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+}
 .combined-text{
 		display: inline-flex;
 		align-items: center;
