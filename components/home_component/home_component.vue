@@ -196,7 +196,7 @@
 	}
 	.frame{
 		display: flex;
-		width: 343px;
+		width: 323px;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 20px;
@@ -230,7 +230,7 @@
 	}
 	.title_frame{
 		display: flex;
-		width: 343px;
+		width: 323px;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 12px;

@@ -3,12 +3,14 @@ module.exports = {
 
     // 数学公式解析API
     latex:{
-        api:'https://www.withtime.site/answerai/simple_render_latex?tex'
+        // api:'https://www.withtime.site/answerai/simple_render_latex?tex'
+		api:'https://www.zhihu.com/equation?tex'
     },
 
     // yuml图解析APPI
     yuml:{
-        api:'https://www.withtime.site/answerai/simple_render_latex?tex'
+        // api:'https://www.withtime.site/answerai/simple_render_latex?tex'
+		api:'https://www.zhihu.com/equation?tex'
     },
 
     // markdown解析配置，保留需要的选项即可

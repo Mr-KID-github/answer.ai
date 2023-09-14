@@ -101,19 +101,25 @@ var components
 try {
   components = {
     uTabs: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 242))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabs/u-tabs.vue */ 241))
     },
     home_component: function () {
-      return Promise.all(/*! import() | components/home_component/home_component */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/home_component/home_component")]).then(__webpack_require__.bind(null, /*! @/components/home_component/home_component.vue */ 250))
+      return Promise.all(/*! import() | components/home_component/home_component */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/home_component/home_component")]).then(__webpack_require__.bind(null, /*! @/components/home_component/home_component.vue */ 249))
+    },
+    AI_Chat: function () {
+      return __webpack_require__.e(/*! import() | components/AI_Chat/AI_Chat */ "components/AI_Chat/AI_Chat").then(__webpack_require__.bind(null, /*! @/components/AI_Chat/AI_Chat.vue */ 428))
     },
     mine: function () {
-      return __webpack_require__.e(/*! import() | components/mine/mine */ "components/mine/mine").then(__webpack_require__.bind(null, /*! @/components/mine/mine.vue */ 257))
+      return __webpack_require__.e(/*! import() | components/mine/mine */ "components/mine/mine").then(__webpack_require__.bind(null, /*! @/components/mine/mine.vue */ 256))
+    },
+    custom_input: function () {
+      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 284))
     },
     uTabbar: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 264))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 263))
     },
     uTabbarItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 272))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 271))
     },
   }
 } catch (e) {
@@ -217,19 +223,40 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
       list1: [{
         name: 'AI搜题'
+      }, {
+        name: 'AI对话'
       }],
-      tar_value: 0
+      tar_value: 0,
+      cur_tabs: 'AI对话',
+      chat_content_list: [{
+        'question': "",
+        'answer': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。你可以叫我去写一篇文章，解决数学问题，历史测验的问题和答案等。"
+      }, {
+        'question': "帮我写一篇小作文",
+        'answer': "当然可以！请问您希望这篇小作文是关于什么主题或内容的呢？如果没有特定的要求，我可以直接为您创作一篇。"
+      }]
     };
   },
   onLoad: function onLoad() {},
   methods: {
     click_tabbar: function click_tabbar(res) {
       // console.log(res)
+    },
+    click_tabs: function click_tabs(res) {
+      // console.log(res.name)
+      this.cur_tabs = res.name;
     }
   }
 };

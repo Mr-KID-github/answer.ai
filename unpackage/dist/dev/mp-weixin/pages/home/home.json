@@ -4,7 +4,9 @@
   "usingComponents": {
     "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
     "home_component": "/components/home_component/home_component",
+    "a-i_-chat": "/components/AI_Chat/AI_Chat",
     "mine": "/components/mine/mine",
+    "custom_input": "/components/custom_input/custom_input",
     "u-tabbar": "/uni_modules/uview-ui/components/u-tabbar/u-tabbar",
     "u-tabbar-item": "/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item"
   }

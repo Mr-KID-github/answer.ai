@@ -16,10 +16,8 @@ app.$mount()
 
 // #ifdef VUE3
 import { createSSRApp } from 'vue'
-const towxml = require('./wxcomponents/towxml/index');
 export function createApp() {
   const app = createSSRApp(App)
-  app.config.globalProperties.$towxml = towxml
   return {
     app
   }

@@ -1,6 +1,6 @@
 
 .conten_frame{
-		width: 343px;
+		width: 322px;
 		align-items: flex-start;
 		gap: 20px;
 		
@@ -16,6 +16,7 @@
 		width: 100%;
 		flex: 1;  /* 这使得它能够自动扩展并占据所有剩余空间 */
 		padding-bottom: 40px;
+		position: relative; /* 添加此行 */
 }
 .background{
 	display: flex;

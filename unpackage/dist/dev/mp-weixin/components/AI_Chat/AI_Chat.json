@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "adaptive-reply-box": "/components/AdaptiveReplyBox/AdaptiveReplyBox"
+  },
+  "component": true
+}

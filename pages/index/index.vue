@@ -54,7 +54,7 @@
 			}
 		},
 		onLoad() {
-			const MathJax = require('mathjax');
+			
 		},
 		methods: {
 			// 逐字显示

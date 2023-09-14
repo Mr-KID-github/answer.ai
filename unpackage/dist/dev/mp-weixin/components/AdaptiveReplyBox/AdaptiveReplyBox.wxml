@@ -1,0 +1,1 @@
+<view class="frame"><text>{{content}}</text></view>

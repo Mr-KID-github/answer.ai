@@ -3,18 +3,25 @@
 		<view class="title">Answer AI China</view>
 		
 		<view style="margin-top:10px; width: 100%; padding-left: 40px; background: transparent; margin-bottom: 30px;">
-			<u-tabs :list="list1"></u-tabs>
+			<u-tabs :list="list1"  @click="click_tabs"></u-tabs>
 		</view>
 		<conten_frame></conten_frame>
 		<view class="conten_frame">
 			<view v-if="tar_value==0">
-				<home_component></home_component>
+				<view v-if="cur_tabs=='AI搜题'">
+					<home_component></home_component>
+				</view>
+				<view v-if="cur_tabs=='AI对话'">
+					<AI_Chat :chat_content_list="chat_content_list"></AI_Chat>
+				</view>
 			</view>
 			
 			<view v-else-if="tar_value==1">
 				<mine></mine>
 			</view>
-			
+			<view v-if="tar_value==0 && cur_tabs=='AI对话'"  style="position: fixed; bottom: 100px;">
+				<custom_input></custom_input>
+			</view>
 		</view>
 					
 		<!-- 底部 -->			
@@ -40,9 +47,23 @@
 	        data() {
 	            return {
 	                list1: [{
-	                    name: 'AI搜题',
-	                }],
-					tar_value: 0
+						name: 'AI搜题'
+					},
+					{
+						name: 'AI对话'
+					}],
+					tar_value: 0,
+					cur_tabs: 'AI对话',
+					chat_content_list: [
+						{
+							'question': "",
+							'answer': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。你可以叫我去写一篇文章，解决数学问题，历史测验的问题和答案等。"
+						},
+						{
+							'question': "帮我写一篇小作文",
+							'answer': "当然可以！请问您希望这篇小作文是关于什么主题或内容的呢？如果没有特定的要求，我可以直接为您创作一篇。"
+						}
+					]
 	            }
 	        },
 			onLoad() {
@@ -51,6 +72,10 @@
 			methods: {
 				click_tabbar(res) {
 					// console.log(res)
+				},
+				click_tabs(res){
+					// console.log(res.name)
+					this.cur_tabs = res.name
 				}
 			}
 	    }
@@ -59,7 +84,7 @@
 	
 <style>
 	.conten_frame{
-		width: 343px;
+		width: 322px;
 		align-items: flex-start;
 		gap: 20px;
 		
@@ -75,6 +100,7 @@
 		width: 100%;
 		flex: 1;  /* 这使得它能够自动扩展并占据所有剩余空间 */
 		padding-bottom: 40px;
+		position: relative; /* 添加此行 */
 	}
 .background{
 	display: flex;

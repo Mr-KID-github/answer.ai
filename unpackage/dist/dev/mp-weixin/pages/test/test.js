@@ -152,7 +152,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/jo-mar
 //
 var joMarkdown = function joMarkdown() {
   __webpack_require__.e(/*! require.ensure | uni_modules/jo-markdown/components/jo-markdown/decode */ "uni_modules/jo-markdown/components/jo-markdown/decode").then((function () {
-    return resolve(__webpack_require__(/*! @/uni_modules/jo-markdown/components/jo-markdown/decode.vue */ 280));
+    return resolve(__webpack_require__(/*! @/uni_modules/jo-markdown/components/jo-markdown/decode.vue */ 279));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
