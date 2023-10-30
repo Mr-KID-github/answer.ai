@@ -31,10 +31,16 @@
 			},
 			 send_message() {
 				// 在这里执行你的方法
-				console.log('发送给前端......');
-				this.$emit('click_ask',this.ask_value)
+				if (this.ask_value) {
+					console.log('发送给前端......');
+					this.$emit('click_ask',this.ask_value)
+				} else {
+					uni.showToast({
+						title:"请输入提问",
+						icon: "none"
+					})
+				}
 			},
-		
 		}
 	}
 </script>

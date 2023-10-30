@@ -107,19 +107,19 @@ try {
       return Promise.all(/*! import() | components/home_component/home_component */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/home_component/home_component")]).then(__webpack_require__.bind(null, /*! @/components/home_component/home_component.vue */ 249))
     },
     AI_Chat: function () {
-      return __webpack_require__.e(/*! import() | components/AI_Chat/AI_Chat */ "components/AI_Chat/AI_Chat").then(__webpack_require__.bind(null, /*! @/components/AI_Chat/AI_Chat.vue */ 428))
+      return __webpack_require__.e(/*! import() | components/AI_Chat/AI_Chat */ "components/AI_Chat/AI_Chat").then(__webpack_require__.bind(null, /*! @/components/AI_Chat/AI_Chat.vue */ 256))
     },
     mine: function () {
-      return __webpack_require__.e(/*! import() | components/mine/mine */ "components/mine/mine").then(__webpack_require__.bind(null, /*! @/components/mine/mine.vue */ 256))
+      return __webpack_require__.e(/*! import() | components/mine/mine */ "components/mine/mine").then(__webpack_require__.bind(null, /*! @/components/mine/mine.vue */ 263))
     },
     custom_input: function () {
-      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 284))
+      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 270))
     },
     uTabbar: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 263))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar/u-tabbar.vue */ 275))
     },
     uTabbarItem: function () {
-      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 271))
+      return Promise.all(/*! import() | uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uview-ui/components/u-tabbar-item/u-tabbar-item.vue */ 283))
     },
   }
 } catch (e) {
@@ -181,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -230,6 +230,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+
+var accumulatedData = ""; // 用于累积从chunk接收到的数据
 var _default = {
   data: function data() {
     return {
@@ -241,11 +245,14 @@ var _default = {
       tar_value: 0,
       cur_tabs: 'AI对话',
       chat_content_list: [{
-        'question': "",
-        'answer': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。你可以叫我去写一篇文章，解决数学问题，历史测验的问题和答案等。"
+        'content': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。",
+        "role": "system"
       }, {
-        'question': "帮我写一篇小作文",
-        'answer': "当然可以！请问您希望这篇小作文是关于什么主题或内容的呢？如果没有特定的要求，我可以直接为您创作一篇。"
+        'content': "帮我写一篇小作文",
+        'role': "user"
+      }, {
+        'role': "assistant",
+        'content': "当然可以！请告诉我你想要什么类型？"
       }]
     };
   },
@@ -257,10 +264,106 @@ var _default = {
     click_tabs: function click_tabs(res) {
       // console.log(res.name)
       this.cur_tabs = res.name;
+    },
+    // 处理提问框提出问题
+    handleAskData: function handleAskData(data) {
+      console.log("处理提问框提出问题：", data);
+      // 将其添加到深入提问数组
+      this.chat_content_list.push({
+        "role": "user",
+        "content": data
+      });
+      console.log("将提问框提出问题放入数组中", this.chat_content_list);
+      uni.showLoading({
+        title: "提问中..."
+      });
+      this.callGPTApi(function (response) {
+        console.log(response);
+      });
+    },
+    // AI对话接口
+    callGPTApi: function callGPTApi(payload, callback) {
+      var _this = this;
+      console.log("调用GPT接口");
+      var requestTask = uni.request({
+        enableChunked: true,
+        // 开启分片模式
+        url: getApp().globalData.server + '/ask_chat',
+        method: 'POST',
+        data: JSON.stringify(this.chat_content_list),
+        header: {
+          'content-type': 'application/json' // 设置请求的 header
+        },
+
+        success: function success(res) {
+          _this.chat_content_list.push({
+            "role": "assistant",
+            "content": ""
+          });
+          console.log('Request completed', res);
+        },
+        fail: function fail(err) {
+          console.error('Request failed:', err);
+        },
+        complete: function complete() {
+          uni.hideLoading();
+        }
+      });
+      requestTask.onChunkReceived(function (chunk) {
+        // 接收分片的数据
+        // 使用TextDecoder将Uint8Array转换为字符串
+        var textChunk = new TextDecoder().decode(chunk.data);
+        console.log("\u63A5\u6536\u5206\u7247\u7684\u6570\u636E (\u5927\u5C0F\uFF1A".concat(textChunk.length, " \u5B57\u7B26):\n").concat(textChunk));
+        // 这里处理和渲染你的数据
+        // this.handleChunk(chunk);
+      });
+    },
+    handleChunk: function handleChunk(response) {
+      var chunk = response.data;
+      var decoder = new TextDecoder('utf-8');
+      var decodedString;
+      try {
+        decodedString = decoder.decode(chunk);
+      } catch (error) {
+        console.error("Error while decoding chunk:", error);
+        return;
+      }
+      accumulatedData += decodedString;
+
+      // 循环处理完整的消息
+      while (true) {
+        var startPos = accumulatedData.indexOf("data: ");
+        var endPos = accumulatedData.indexOf("\n\n", startPos);
+        if (startPos !== -1 && endPos !== -1) {
+          var jsonString = accumulatedData.substring(startPos + 6, endPos).trim();
+          var parsedData = void 0;
+          try {
+            parsedData = JSON.parse(jsonString);
+            var content = parsedData.text.content;
+
+            // 显示解析后的内容
+            this.chat_content_list[-1].content += content;
+            console.log("显示解析后的内容", this.chat_content_list[-1].content);
+            console.log(this.chat_content_list);
+            // 清除已处理的数据
+            accumulatedData = accumulatedData.substring(endPos + 2);
+          } catch (e) {
+            console.error("Failed to parse JSON:", e);
+            break;
+          }
+        } else {
+          break;
+        }
+      }
+    },
+    appendCharacterToDisplay: function appendCharacterToDisplay(content) {
+      // 你的逐字符渲染逻辑，例如更新文本框或其他UI元素
+      console.log("逐字符渲染", content);
     }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

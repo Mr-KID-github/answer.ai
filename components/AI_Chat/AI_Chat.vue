@@ -1,10 +1,10 @@
 <template>
 	<view class="frame">
 		<block v-for="(item,index) in chat_content_list">
-			<AdaptiveReplyBox :content="item.question" v-if="item.question"></AdaptiveReplyBox>
-			<view class="answer_group" v-if="item.answer">
+			<AdaptiveReplyBox :content="item.content" v-if="item.role == 'user'"></AdaptiveReplyBox>
+			<view class="answer_group" v-if="item.role == 'system' || item.role == 'assistant'">
 				<image src="/static/logo.jpg"></image>
-				<AdaptiveReplyBox :content="item.answer"></AdaptiveReplyBox>
+				<AdaptiveReplyBox :content="item.content"></AdaptiveReplyBox>
 			</view>
 		</block>
 	</view>
@@ -24,20 +24,21 @@
 
 <style>
 	.frame{
-		width: 334px;
+		width: 668rpx;
 		display: inline-flex;
 		flex-direction: column;
 		align-items: flex-end;
-		gap: 25px;
+		gap: 50rpx;
 	}
 .answer_group{
 	display: flex;
 	align-items: flex-start;
-	gap: 14px;
+	gap: 28rpx;
+	width: 100%;
 }
 .answer_group image{
-	width: 40px;
-	height: 40px;
-	border-radius: 20px;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
 }
 </style>

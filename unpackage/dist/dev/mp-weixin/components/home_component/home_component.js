@@ -80,7 +80,7 @@ var components
 try {
   components = {
     custom_input: function () {
-      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 284))
+      return __webpack_require__.e(/*! import() | components/custom_input/custom_input */ "components/custom_input/custom_input").then(__webpack_require__.bind(null, /*! @/components/custom_input/custom_input.vue */ 270))
     },
   }
 } catch (e) {
@@ -199,7 +199,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/uni_modules/jo-mar
 //
 var joMarkdown = function joMarkdown() {
   __webpack_require__.e(/*! require.ensure | uni_modules/jo-markdown/components/jo-markdown/decode */ "uni_modules/jo-markdown/components/jo-markdown/decode").then((function () {
-    return resolve(__webpack_require__(/*! @/uni_modules/jo-markdown/components/jo-markdown/decode.vue */ 279));
+    return resolve(__webpack_require__(/*! @/uni_modules/jo-markdown/components/jo-markdown/decode.vue */ 291));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {
@@ -264,7 +264,7 @@ var _default = {
         title: "提问中..."
       });
       uni.request({
-        url: getApp().globalData.server + '/deep_ask_answer',
+        url: getApp().globalData.server + '/ask_chat',
         method: 'POST',
         data: JSON.stringify(this.deep_answer_data),
         header: {

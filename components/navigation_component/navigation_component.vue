@@ -27,12 +27,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 17px;
+	gap: 34rpx;
 }
 .item image{
-	width: 10px;
-	height: 10px;
-	stroke-width: 2px;
+	width: 20rpx;
+	height: 20rpx;
+	stroke-width: 4rpx;
 	stroke: #000;
 }
 .item_text{
@@ -40,7 +40,7 @@
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: ABeeZee;
-	font-size: 15px;
+	font-size: 30rpx;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;

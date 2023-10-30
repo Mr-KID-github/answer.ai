@@ -53,14 +53,14 @@
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 20px;
+	gap: 40rpx;
 }
 .title{
 	color: #8C8B8B;
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: ABeeZee;
-	font-size: 15px;
+	font-size: 30rpx;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;

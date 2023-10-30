@@ -1,21 +1,21 @@
 
 .frame{
 	display: inline-flex;
-	padding: 10px;
+	padding: 20rpx;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: 20rpx;
 	
-	border-radius: 10px;
+	border-radius:  20rpx;
 	background: #D9D9D9;
 }
 .frame text{
 	color: #000;
 	font-family: ABeeZee;
-	font-size: 17px;
+	font-size: 34rpx;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 16px; /* 94.118% */
-	max-width: 250px;
+	line-height: 32rpx; /* 94.118% */
+	max-width: 500rpx;
 }
 

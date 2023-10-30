@@ -1,28 +1,28 @@
 
 .conten_frame{
-		width: 322px;
+		width: 644rpx;
 		align-items: flex-start;
-		gap: 20px;
+		gap: 40rpx;
 		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 50px;
+		padding-top: 100rpx;
 		flex-shrink: 0;
-		border-radius: 20px 20px 0px 0px;
+		border-radius: 40rpx 40rpx 0rpx 0rpx;
 		background: #FFF;
 		
 		margin-top: auto;
 		width: 100%;
 		flex: 1;  /* 这使得它能够自动扩展并占据所有剩余空间 */
-		padding-bottom: 40px;
+		padding-bottom: 80rpx;
 		position: relative; /* 添加此行 */
 }
 .background{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding-top: 20px;
+	padding-top: 40rpx;
 	
 	width: 100vw;
 	height: 100vh;
@@ -32,7 +32,7 @@
 .title{
 	color: #000;
 	font-family: Inter;
-	font-size: 12px;
+	font-size: 24rpx;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
