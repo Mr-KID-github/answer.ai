@@ -3,7 +3,7 @@
 		<u-input
 				type="text"
 			    placeholder="输入提问"
-			    prefixIconStyle="font-size: 22px;color: #909399"
+			    prefixIconStyle="font-size: 44rpx;color: #909399"
 				shape="circle"
 				customStyle="width: 550rpx; padding:10rpx; padding-left:50rpx; padding-right:50rpx;height:60rpx"
 				confirmType="send"

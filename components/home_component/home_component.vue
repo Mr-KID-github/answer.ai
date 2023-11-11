@@ -21,19 +21,20 @@
 		</view>
 		
 		<!-- 标题框架:Chat Test -->
-		<view class="title_frame" v-if="deep_answer_data.length">
+		<!-- <view class="title_frame" v-if="deep_answer_data.length">
 			<text class="title_1">深入交流</text>
 			<text class="title_2">如果有不懂的地方继续提问吧~</text>
-		</view>
+		</view> -->
 		
 		<!-- 提问框 -->
 		<view v-if="deep_answer_data.length" class="frame">
-			<custom_input @click_ask="handleAskData"></custom_input>
+			<!-- <custom_input @click_ask="handleAskData"></custom_input> -->
 			<view class="title_frame" v-if="is_ask">
 				<!-- <text class="title_2">你好呀！很高兴见到你。有什么我可以帮助你的吗？</text> -->
 				<joMarkdown :nodes="markdownData_ask_deep"></joMarkdown>
 			</view>
 		</view>
+		
 	</view>
 </template>
 

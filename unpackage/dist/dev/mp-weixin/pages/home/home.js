@@ -247,7 +247,7 @@ var _default = {
         name: 'AI对话'
       }],
       tar_value: 0,
-      cur_tabs: 'AI对话',
+      cur_tabs: 'AI搜题',
       chat_content_list: [{
         'content': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。",
         "role": "system"
@@ -387,6 +387,7 @@ var _default = {
       }
     },
     processData: function processData(parsedData) {
+      var _this2 = this;
       console.log(this.chat_content_list);
       console.log("length", this.chat_content_list.length);
       if (parsedData.type === 0 && parsedData.text && parsedData.text.content) {
@@ -395,17 +396,20 @@ var _default = {
         console.log("lastIndex", lastIndex);
         // 检查确保最后一个元素存在
         if (lastIndex >= 0) {
-          // 修改数组中对象的属性并确保响应性
-          this.$set(this.chat_content_list[lastIndex], 'content', this.chat_content_list[lastIndex].content + parsedData.text.content);
+          // console.log(this.chat_content_list[lastIndex].content)
+
+          setTimeout(function () {
+            // 修改数组中对象的属性并确保响应性
+            _this2.$set(_this2.chat_content_list[lastIndex], 'content', _this2.chat_content_list[lastIndex].content + parsedData.text.content);
+          }, 500); // 200毫秒延迟逐字显示
         }
       } else if (parsedData.type === 1 && parsedData.ext) {
         console.log("Received status message:", parsedData.ext);
       }
-    },
-    appendCharacterToDisplay: function appendCharacterToDisplay(content) {
-      // 你的逐字符渲染逻辑，例如更新文本框或其他UI元素
-      console.log("逐字符渲染", content);
-    }
+    } // appendCharacterToDisplay(content) {
+    //     // 你的逐字符渲染逻辑，例如更新文本框或其他UI元素
+    // 	console.log("逐字符渲染",content)
+    // }
   }
 };
 exports.default = _default;
