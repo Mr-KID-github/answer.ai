@@ -44,6 +44,7 @@
 </template>
 
 <script>
+	import * as TextEncoding from 'text-encoding-shim';
 	let accumulatedData = "";  // 用于累积从chunk接收到的数据
 	 export default {
 	        data() {
@@ -60,21 +61,13 @@
 						{
 							'content': "大家好，我是你的人工智能助手，我可以帮助你完成不同的任务。",
 							"role": "system",
-						},
-						{
-							'content': "帮我写一篇小作文",
-							'role': "user"
-						},
-						{
-							'role': "assistant",
-							'content': "当然可以！请告诉我你想要什么类型？"
 						}
 					],
-			
+					Receive_data: 0
 	            }
 	        },
 			onLoad() {
-				
+
 			},
 			methods: {
 				click_tabbar(res) {
@@ -88,12 +81,17 @@
 				handleAskData(data){
 					console.log("处理提问框提出问题：",data)
 					// 将其添加到深入提问数组
-					this.chat_content_list.push({
-						"role": "user",
-						"content": data
-					})
-					console.log("将提问框提出问题放入数组中",this.chat_content_list)
-					
+					// this.chat_content_list.push({
+					// 	"role": "user",
+					// 	"content": data
+					// })
+					// 将新对象添加到数组中并确保响应性
+					 let newItem = {
+					       role: "user",
+					       content: data
+					     };
+					 this.chat_content_list.push(newItem);
+
 					uni.showLoading({
 						title:"提问中..."
 					})
@@ -105,7 +103,7 @@
 				// AI对话接口
 				callGPTApi(payload,callback) {
 				    console.log("调用GPT接口")
-					
+					// console.log("添加后",this.chat_content_list.length)
 					const requestTask = uni.request({
 						enableChunked:true,  // 开启分片模式
 						url: getApp().globalData.server + '/ask_chat',
@@ -115,10 +113,7 @@
 							'content-type': 'application/json' // 设置请求的 header
 						},
 						success: (res) => {
-							this.chat_content_list.push({
-								"role": "assistant",
-								"content": ""
-							})
+							this.Receive_data = 0			// 接收数据完毕
 							 console.log('Request completed', res);
 						},
 						fail: (err) => {
@@ -126,63 +121,110 @@
 						},
 						complete() {
 							uni.hideLoading()
+							
 						}
 					})
 					requestTask.onChunkReceived((chunk)=>{
+						if (!this.Receive_data) {
+							// 是否正在接收数据
+							this.chat_content_list.push({
+								"role": "assistant",
+								"content": ""
+							})
+						}
+						this.Receive_data = 1			// 正在接收数据
 					    // 接收分片的数据
 						// 使用TextDecoder将Uint8Array转换为字符串
-						const textChunk = new TextDecoder().decode(chunk.data);
-						console.log(`接收分片的数据 (大小：${textChunk.length} 字符):\n${textChunk}`);
+						// const textChunk = new TextDecoder().decode(chunk.data);
+						// console.log(`接收分片的数据 (大小：${textChunk.length} 字符):\n${textChunk}`);
 						// 这里处理和渲染你的数据
 						// this.handleChunk(chunk);
+						 const uint8Array = new Uint8Array(chunk.data);
+						const str = new TextEncoding.TextDecoder('utf-8').decode(uint8Array);
+						// 看一下 打印出来的结果
+						console.log(str)
+						// 调用 handleChunk 处理每个分片
+					    this.handleChunk(str);
+						
 					})
 				},
-				handleChunk(response) {
-					let chunk = response.data;
-					let decoder = new TextDecoder('utf-8');
-					let decodedString;
-
-					try {
-						decodedString = decoder.decode(chunk);
-					} catch (error) {
-						console.error("Error while decoding chunk:", error);
-						return;
-					}
-
-					accumulatedData += decodedString;
-
-					// 循环处理完整的消息
-					while (true) {
-						let startPos = accumulatedData.indexOf("data: ");
-						let endPos = accumulatedData.indexOf("\n\n", startPos);
-
-						if (startPos !== -1 && endPos !== -1) {
-							let jsonString = accumulatedData.substring(startPos + 6, endPos).trim();
-							let parsedData;
-
-							try {
-								parsedData = JSON.parse(jsonString);
-								let content = parsedData.text.content;
-
-								// 显示解析后的内容
-								this.chat_content_list[-1].content += content
-								console.log("显示解析后的内容",this.chat_content_list[-1].content)
-								console.log(this.chat_content_list)
-								// 清除已处理的数据
-								accumulatedData = accumulatedData.substring(endPos + 2);
-							} catch (e) {
-								console.error("Failed to parse JSON:", e);
-								break;
+				handleChunk(chunk) {
+					// 添加新数据到累积数据
+					accumulatedData += chunk;
+				
+					// 正则表达式用来找到 'data: {' 开始的JSON对象
+					const jsonStartRegex = /data: \{/;
+				
+					let tryParseJson = (data) => {
+						try {
+							return JSON.parse(data);
+						} catch (e) {
+							return null;
+						}
+					};
+				
+					// 用来累积可能的 JSON 片段
+					let jsonBuffer = '';
+					let bracketCount = 0;
+				
+					for (let i = 0; i < accumulatedData.length; i++) {
+						const char = accumulatedData[i];
+						jsonBuffer += char;
+				
+						if (char === '{') {
+							bracketCount++; // 找到一个未匹配的左花括号
+						} else if (char === '}') {
+							bracketCount--; // 找到一个匹配的右花括号
+						}
+				
+						// 检查是否有完整的 JSON 对象
+						if (bracketCount === 0 && jsonBuffer.trim().match(jsonStartRegex)) {
+							// console.log("jsonBuffer",jsonBuffer)
+							// 去除 'data: ' 前缀，并尝试解析JSON
+							const jsonData = tryParseJson(jsonBuffer.trim().substring(6));
+							
+							if (jsonData) {
+								// 如果解析成功，处理数据
+								this.processData(jsonData);
+								// 清空 JSON 缓冲区，准备接收新的 JSON 对象
+								jsonBuffer = '';
+							} else {
+								// 如果解析失败，保留数据直到下一个完整的JSON对象
+								continue;
 							}
-						} else {
-							break;
 						}
 					}
+				
+					// 如果花括号计数不为 0（即 JSON 数据不完整），保留累积的数据
+					if (bracketCount !== 0) {
+						// 保存不完整的JSON对象到累积数据
+						accumulatedData = jsonBuffer;
+					} else {
+						// 如果所有 JSON 对象都已处理完毕，重置累积数据
+						accumulatedData = '';
+					}
+				},
+
+
+				processData(parsedData) {
+				    console.log(this.chat_content_list);
+					console.log("length",this.chat_content_list.length)
+				    if (parsedData.type === 0 && parsedData.text && parsedData.text.content) {
+				        // 获取数组的最后一个元素的索引
+				        let lastIndex = this.chat_content_list.length - 1;
+				        console.log("lastIndex",lastIndex)
+				        // 检查确保最后一个元素存在
+				        if (lastIndex >= 0) {
+				            // 修改数组中对象的属性并确保响应性
+				            this.$set(this.chat_content_list[lastIndex], 'content', this.chat_content_list[lastIndex].content + parsedData.text.content);
+				        }
+				    } else if (parsedData.type === 1 && parsedData.ext) {
+				        console.log("Received status message:", parsedData.ext);
+				    }
 				},
 				appendCharacterToDisplay(content) {
 				    // 你的逐字符渲染逻辑，例如更新文本框或其他UI元素
 					console.log("逐字符渲染",content)
-					
 				}
 
 			}

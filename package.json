@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "mathjax": "^3.2.2",
-    "mp-html": "^2.4.2"
+    "mp-html": "^2.4.2",
+    "text-encoding-shim": "^1.0.5"
   }
 }

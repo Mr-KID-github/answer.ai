@@ -780,8 +780,8 @@ function populateParameters(result) {
     appVersion: "1.0.0",
     appVersionCode: "100",
     appLanguage: getAppLanguage(hostLanguage),
-    uniCompileVersion: "3.8.7",
-    uniRuntimeVersion: "3.8.7",
+    uniCompileVersion: "3.96",
+    uniRuntimeVersion: "3.96",
     uniPlatform: undefined || "mp-weixin",
     deviceBrand: deviceBrand,
     deviceModel: model,
@@ -9477,9 +9477,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!******************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/pages.json ***!
-  \******************************************************************************/
+/*!************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/pages.json ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9625,9 +9625,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 35 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/index.js ***!
-  \*************************************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/index.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9714,9 +9714,9 @@ exports.default = _default;
 
 /***/ }),
 /* 36 */
-/*!************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/mixin/mixin.js ***!
-  \************************************************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/mixin/mixin.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9882,9 +9882,9 @@ exports.default = _default;
 
 /***/ }),
 /* 37 */
-/*!**************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9905,9 +9905,9 @@ exports.default = _default;
 
 /***/ }),
 /* 38 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/index.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/index.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9925,9 +9925,9 @@ exports.default = _default;
 
 /***/ }),
 /* 39 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10131,9 +10131,9 @@ exports.default = Request;
 
 /***/ }),
 /* 40 */
-/*!**********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
-  \**********************************************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10153,9 +10153,9 @@ exports.default = _default;
 
 /***/ }),
 /* 41 */
-/*!****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
-  \****************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10234,9 +10234,9 @@ exports.default = _default;
 
 /***/ }),
 /* 42 */
-/*!******************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
-  \******************************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10304,9 +10304,9 @@ function buildURL(url, params) {
 
 /***/ }),
 /* 43 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/utils.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/utils.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10457,9 +10457,9 @@ function isUndefined(val) {
 
 /***/ }),
 /* 44 */
-/*!********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
-  \********************************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10491,9 +10491,9 @@ function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 /* 45 */
-/*!***********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \***********************************************************************************************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10519,9 +10519,9 @@ function isAbsoluteURL(url) {
 
 /***/ }),
 /* 46 */
-/*!*********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
-  \*********************************************************************************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10545,9 +10545,9 @@ function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 /* 47 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10577,9 +10577,9 @@ function settle(resolve, reject, response) {
 
 /***/ }),
 /* 48 */
-/*!*************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
-  \*************************************************************************************************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10641,9 +10641,9 @@ exports.default = _default;
 
 /***/ }),
 /* 49 */
-/*!******************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
-  \******************************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10717,9 +10717,9 @@ exports.default = _default;
 
 /***/ }),
 /* 50 */
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
-  \***************************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10749,9 +10749,9 @@ exports.default = _default;
 
 /***/ }),
 /* 51 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10997,7 +10997,7 @@ var clone = function () {
 }();
 var _default = clone;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/buffer/index.js */ 52).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 52).Buffer))
 
 /***/ }),
 /* 52 */
@@ -13073,9 +13073,9 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 56 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/util/route.js ***!
-  \***********************************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/util/route.js ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13635,9 +13635,9 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 /* 60 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/colorGradient.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/colorGradient.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13790,9 +13790,9 @@ exports.default = _default;
 
 /***/ }),
 /* 61 */
-/*!**************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/test.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/test.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14095,9 +14095,9 @@ exports.default = _default;
 
 /***/ }),
 /* 62 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/debounce.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/debounce.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14142,9 +14142,9 @@ exports.default = _default;
 
 /***/ }),
 /* 63 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/throttle.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/throttle.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14191,9 +14191,9 @@ exports.default = _default;
 
 /***/ }),
 /* 64 */
-/*!***************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/index.js ***!
-  \***************************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/index.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14992,9 +14992,9 @@ exports.default = _default;
 
 /***/ }),
 /* 65 */
-/*!***************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/digit.js ***!
-  \***************************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/digit.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15211,9 +15211,9 @@ module.exports = _toArray, module.exports.__esModule = true, module.exports["def
 
 /***/ }),
 /* 67 */
-/*!**************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/config.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/config.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15255,9 +15255,9 @@ exports.default = _default;
 
 /***/ }),
 /* 68 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props.js ***!
-  \*************************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15367,9 +15367,9 @@ exports.default = _default;
 
 /***/ }),
 /* 69 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15411,9 +15411,9 @@ exports.default = _default;
 
 /***/ }),
 /* 70 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/album.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/album.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15455,9 +15455,9 @@ exports.default = _default;
 
 /***/ }),
 /* 71 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/alert.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/alert.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15494,9 +15494,9 @@ exports.default = _default;
 
 /***/ }),
 /* 72 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/avatar.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/avatar.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15539,9 +15539,9 @@ exports.default = _default;
 
 /***/ }),
 /* 73 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15581,9 +15581,9 @@ exports.default = _default;
 
 /***/ }),
 /* 74 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/backtop.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/backtop.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15627,9 +15627,9 @@ exports.default = _default;
 
 /***/ }),
 /* 75 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/badge.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/badge.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15673,9 +15673,9 @@ exports.default = _default;
 
 /***/ }),
 /* 76 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/button.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/button.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15732,9 +15732,9 @@ exports.default = _default;
 
 /***/ }),
 /* 77 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/calendar.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/calendar.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15795,9 +15795,9 @@ exports.default = _default;
 
 /***/ }),
 /* 78 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15827,9 +15827,9 @@ exports.default = _default;
 
 /***/ }),
 /* 79 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/cell.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/cell.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15879,9 +15879,9 @@ exports.default = _default;
 
 /***/ }),
 /* 80 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15913,9 +15913,9 @@ exports.default = _default;
 
 /***/ }),
 /* 81 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15957,9 +15957,9 @@ exports.default = _default;
 
 /***/ }),
 /* 82 */
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
-  \***************************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16005,9 +16005,9 @@ exports.default = _default;
 
 /***/ }),
 /* 83 */
-/*!****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
-  \****************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16037,9 +16037,9 @@ exports.default = _default;
 
 /***/ }),
 /* 84 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/code.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/code.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16074,9 +16074,9 @@ exports.default = _default;
 
 /***/ }),
 /* 85 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16120,9 +16120,9 @@ exports.default = _default;
 
 /***/ }),
 /* 86 */
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/col.js ***!
-  \*****************************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/col.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16156,9 +16156,9 @@ exports.default = _default;
 
 /***/ }),
 /* 87 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/collapse.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/collapse.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16190,9 +16190,9 @@ exports.default = _default;
 
 /***/ }),
 /* 88 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16232,9 +16232,9 @@ exports.default = _default;
 
 /***/ }),
 /* 89 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16273,9 +16273,9 @@ exports.default = _default;
 
 /***/ }),
 /* 90 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/countDown.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/countDown.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16308,9 +16308,9 @@ exports.default = _default;
 
 /***/ }),
 /* 91 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/countTo.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/countTo.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16350,9 +16350,9 @@ exports.default = _default;
 
 /***/ }),
 /* 92 */
-/*!****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
-  \****************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16405,9 +16405,9 @@ exports.default = _default;
 
 /***/ }),
 /* 93 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/divider.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/divider.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16444,9 +16444,9 @@ exports.default = _default;
 
 /***/ }),
 /* 94 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/empty.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/empty.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16486,9 +16486,9 @@ exports.default = _default;
 
 /***/ }),
 /* 95 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/form.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/form.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16531,9 +16531,9 @@ exports.default = _default;
 
 /***/ }),
 /* 96 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/formItem.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/formItem.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16571,9 +16571,9 @@ exports.default = _default;
 
 /***/ }),
 /* 97 */
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/gap.js ***!
-  \*****************************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/gap.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16607,9 +16607,9 @@ exports.default = _default;
 
 /***/ }),
 /* 98 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/grid.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/grid.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16641,9 +16641,9 @@ exports.default = _default;
 
 /***/ }),
 /* 99 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16674,9 +16674,9 @@ exports.default = _default;
 
 /***/ }),
 /* 100 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/icon.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/icon.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16726,9 +16726,9 @@ exports.default = _default;
 
 /***/ }),
 /* 101 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/image.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/image.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16773,9 +16773,9 @@ exports.default = _default;
 
 /***/ }),
 /* 102 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16809,9 +16809,9 @@ exports.default = _default;
 
 /***/ }),
 /* 103 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/indexList.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/indexList.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16847,9 +16847,9 @@ exports.default = _default;
 
 /***/ }),
 /* 104 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/input.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/input.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16912,9 +16912,9 @@ exports.default = _default;
 
 /***/ }),
 /* 105 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16959,9 +16959,9 @@ exports.default = _default;
 
 /***/ }),
 /* 106 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/line.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/line.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16996,9 +16996,9 @@ exports.default = _default;
 
 /***/ }),
 /* 107 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
-  \**************************************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17032,9 +17032,9 @@ exports.default = _default;
 
 /***/ }),
 /* 108 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/link.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/link.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17074,9 +17074,9 @@ exports.default = _default;
 
 /***/ }),
 /* 109 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/list.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/list.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17119,9 +17119,9 @@ exports.default = _default;
 
 /***/ }),
 /* 110 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/listItem.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/listItem.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17151,9 +17151,9 @@ exports.default = _default;
 
 /***/ }),
 /* 111 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17197,9 +17197,9 @@ exports.default = _default;
 
 /***/ }),
 /* 112 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17237,9 +17237,9 @@ exports.default = _default;
 
 /***/ }),
 /* 113 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17286,9 +17286,9 @@ exports.default = _default;
 
 /***/ }),
 /* 114 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/modal.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/modal.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17333,9 +17333,9 @@ exports.default = _default;
 
 /***/ }),
 /* 115 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/navbar.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/navbar.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17382,9 +17382,9 @@ exports.default = _default;
 
 /***/ }),
 /* 116 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/color.js ***!
-  \*************************************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/color.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17415,9 +17415,9 @@ exports.default = _default;
 
 /***/ }),
 /* 117 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17449,9 +17449,9 @@ exports.default = _default;
 
 /***/ }),
 /* 118 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17495,9 +17495,9 @@ exports.default = _default;
 
 /***/ }),
 /* 119 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/notify.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/notify.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17534,9 +17534,9 @@ exports.default = _default;
 
 /***/ }),
 /* 120 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17586,9 +17586,9 @@ exports.default = _default;
 
 /***/ }),
 /* 121 */
-/*!****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
-  \****************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17620,9 +17620,9 @@ exports.default = _default;
 
 /***/ }),
 /* 122 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/overlay.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/overlay.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17655,9 +17655,9 @@ exports.default = _default;
 
 /***/ }),
 /* 123 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/parse.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/parse.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17694,9 +17694,9 @@ exports.default = _default;
 
 /***/ }),
 /* 124 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/picker.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/picker.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17744,9 +17744,9 @@ exports.default = _default;
 
 /***/ }),
 /* 125 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/popup.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/popup.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17790,9 +17790,9 @@ exports.default = _default;
 
 /***/ }),
 /* 126 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/radio.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/radio.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17834,9 +17834,9 @@ exports.default = _default;
 
 /***/ }),
 /* 127 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
-  \************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17881,9 +17881,9 @@ exports.default = _default;
 
 /***/ }),
 /* 128 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/rate.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/rate.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17924,9 +17924,9 @@ exports.default = _default;
 
 /***/ }),
 /* 129 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/readMore.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/readMore.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17963,9 +17963,9 @@ exports.default = _default;
 
 /***/ }),
 /* 130 */
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/row.js ***!
-  \*****************************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/row.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17997,9 +17997,9 @@ exports.default = _default;
 
 /***/ }),
 /* 131 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18035,9 +18035,9 @@ exports.default = _default;
 
 /***/ }),
 /* 132 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
-  \************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18072,9 +18072,9 @@ exports.default = _default;
 
 /***/ }),
 /* 133 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/search.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/search.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18130,9 +18130,9 @@ exports.default = _default;
 
 /***/ }),
 /* 134 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/section.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/section.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18171,9 +18171,9 @@ exports.default = _default;
 
 /***/ }),
 /* 135 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18213,9 +18213,9 @@ exports.default = _default;
 
 /***/ }),
 /* 136 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/slider.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/slider.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18255,9 +18255,9 @@ exports.default = _default;
 
 /***/ }),
 /* 137 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18287,9 +18287,9 @@ exports.default = _default;
 
 /***/ }),
 /* 138 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/steps.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/steps.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18325,9 +18325,9 @@ exports.default = _default;
 
 /***/ }),
 /* 139 */
-/*!***********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
-  \***********************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18360,9 +18360,9 @@ exports.default = _default;
 
 /***/ }),
 /* 140 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/sticky.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/sticky.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18397,9 +18397,9 @@ exports.default = _default;
 
 /***/ }),
 /* 141 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/subsection.js ***!
-  \************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/subsection.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18437,9 +18437,9 @@ exports.default = _default;
 
 /***/ }),
 /* 142 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18469,9 +18469,9 @@ exports.default = _default;
 
 /***/ }),
 /* 143 */
-/*!*****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
-  \*****************************************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18507,9 +18507,9 @@ exports.default = _default;
 
 /***/ }),
 /* 144 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/swiper.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/swiper.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18564,9 +18564,9 @@ exports.default = _default;
 
 /***/ }),
 /* 145 */
-/*!******************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
-  \******************************************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18600,9 +18600,9 @@ exports.default = _default;
 
 /***/ }),
 /* 146 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/switch.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/switch.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18641,9 +18641,9 @@ exports.default = _default;
 
 /***/ }),
 /* 147 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18680,9 +18680,9 @@ exports.default = _default;
 
 /***/ }),
 /* 148 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
-  \************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18717,9 +18717,9 @@ exports.default = _default;
 
 /***/ }),
 /* 149 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/tabs.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/tabs.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18774,9 +18774,9 @@ exports.default = _default;
 
 /***/ }),
 /* 150 */
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/tag.js ***!
-  \*****************************************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/tag.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18820,9 +18820,9 @@ exports.default = _default;
 
 /***/ }),
 /* 151 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/text.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/text.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18876,9 +18876,9 @@ exports.default = _default;
 
 /***/ }),
 /* 152 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/textarea.js ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/textarea.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18929,9 +18929,9 @@ exports.default = _default;
 
 /***/ }),
 /* 153 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/toast.js ***!
-  \*******************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/toast.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18975,9 +18975,9 @@ exports.default = _default;
 
 /***/ }),
 /* 154 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19012,9 +19012,9 @@ exports.default = _default;
 
 /***/ }),
 /* 155 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19056,9 +19056,9 @@ exports.default = _default;
 
 /***/ }),
 /* 156 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/transition.js ***!
-  \************************************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/transition.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19091,9 +19091,9 @@ exports.default = _default;
 
 /***/ }),
 /* 157 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/props/upload.js ***!
-  \********************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/props/upload.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19150,9 +19150,9 @@ exports.default = _default;
 
 /***/ }),
 /* 158 */
-/*!**************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/config/zIndex.js ***!
-  \**************************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/config/zIndex.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19186,9 +19186,9 @@ exports.default = _default;
 
 /***/ }),
 /* 159 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/libs/function/platform.js ***!
-  \******************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/libs/function/platform.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19216,9 +19216,9 @@ exports.default = _default;
 
 /***/ }),
 /* 160 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni.promisify.adaptor.js ***!
-  \********************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni.promisify.adaptor.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19244,7 +19244,91 @@ uni.addInterceptor({
 /* 164 */,
 /* 165 */,
 /* 166 */,
-/* 167 */,
+/* 167 */
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/node_modules/text-encoding-shim/index.js ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
+(function (root, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else { var textEncoding; }
+})(this, function () {
+  "use strict";
+
+  // return native implementation if available
+  var g = typeof global !== 'undefined' ? global : self;
+  if (typeof g.TextEncoder !== 'undefined' && typeof g.TextDecoder !== 'undefined') {
+    return {
+      'TextEncoder': g.TextEncoder,
+      'TextDecoder': g.TextDecoder
+    };
+  }
+
+  // allowed encoding strings for utf-8
+  var utf8Encodings = ['utf8', 'utf-8', 'unicode-1-1-utf-8'];
+  var TextEncoder = function TextEncoder(encoding) {
+    if (utf8Encodings.indexOf(encoding) < 0 && typeof encoding !== 'undefined' && encoding !== null) {
+      throw new RangeError('Invalid encoding type. Only utf-8 is supported');
+    } else {
+      this.encoding = 'utf-8';
+      this.encode = function (str) {
+        if (typeof str !== 'string') {
+          throw new TypeError('passed argument must be of type string');
+        }
+        var binstr = unescape(encodeURIComponent(str)),
+          arr = new Uint8Array(binstr.length);
+        binstr.split('').forEach(function (char, i) {
+          arr[i] = char.charCodeAt(0);
+        });
+        return arr;
+      };
+    }
+  };
+  var TextDecoder = function TextDecoder(encoding, options) {
+    if (utf8Encodings.indexOf(encoding) < 0 && typeof encoding !== 'undefined' && encoding !== null) {
+      throw new RangeError('Invalid encoding type. Only utf-8 is supported');
+    }
+    this.encoding = 'utf-8';
+    this.ignoreBOM = false;
+    this.fatal = typeof options !== 'undefined' && 'fatal' in options ? options.fatal : false;
+    if (typeof this.fatal !== 'boolean') {
+      throw new TypeError('fatal flag must be boolean');
+    }
+    this.decode = function (view, options) {
+      if (typeof view === 'undefined') {
+        return '';
+      }
+      var stream = typeof options !== 'undefined' && 'stream' in options ? options.stream : false;
+      if (typeof stream !== 'boolean') {
+        throw new TypeError('stream option must be boolean');
+      }
+      if (!ArrayBuffer.isView(view)) {
+        throw new TypeError('passed argument must be an array buffer view');
+      } else {
+        var arr = new Uint8Array(view.buffer, view.byteOffset, view.byteLength),
+          charArr = new Array(arr.length);
+        arr.forEach(function (charcode, i) {
+          charArr[i] = String.fromCharCode(charcode);
+        });
+        return decodeURIComponent(escape(charArr.join('')));
+      }
+    };
+  };
+  return {
+    'TextEncoder': TextEncoder,
+    'TextDecoder': TextDecoder
+  };
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3)))
+
+/***/ }),
 /* 168 */,
 /* 169 */,
 /* 170 */,
@@ -19252,15 +19336,16 @@ uni.addInterceptor({
 /* 172 */,
 /* 173 */,
 /* 174 */,
-/* 175 */
-/*!***************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/index.js ***!
-  \***************************************************************************************************************************/
+/* 175 */,
+/* 176 */
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/index.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var md = __webpack_require__(/*! ./parse/markdown/index */ 176),
-  parse = __webpack_require__(/*! ./parse/index */ 214);
+var md = __webpack_require__(/*! ./parse/markdown/index */ 177),
+  parse = __webpack_require__(/*! ./parse/index */ 215);
 module.exports = function (str, type, option) {
   option = option || {};
   var result;
@@ -19280,17 +19365,17 @@ module.exports = function (str, type, option) {
 };
 
 /***/ }),
-/* 176 */
-/*!******************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/index.js ***!
-  \******************************************************************************************************************************************/
+/* 177 */
+/*!************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/index.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var _toConsumableArray = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18);
 var hljs;
-hljs = __webpack_require__(/*! ../highlight/index */ 177);
-var config = __webpack_require__(/*! ../../config */ 178),
+hljs = __webpack_require__(/*! ../highlight/index */ 178);
+var config = __webpack_require__(/*! ../../config */ 179),
   mdOption = function () {
     var result = {
       html: true,
@@ -19322,12 +19407,12 @@ var config = __webpack_require__(/*! ../../config */ 178),
     ;
     return result;
   }(),
-  md = __webpack_require__(/*! ./markdown */ 204)(mdOption);
+  md = __webpack_require__(/*! ./markdown */ 205)(mdOption);
 
 // 应用Markdown解析扩展，包括自定义组件（['sub','sup','ins','mark','emoji','todo','latex','yuml','echarts']）
 [].concat(_toConsumableArray(config.markdown), _toConsumableArray(config.components)).forEach(function (item) {
   if (!/^audio-player|table|todogroup|img$/.test(item)) {
-    md.use(__webpack_require__(205)("./".concat(item)));
+    md.use(__webpack_require__(206)("./".concat(item)));
   }
   ;
 });
@@ -19344,25 +19429,25 @@ module.exports = function (str) {
 };
 
 /***/ }),
-/* 177 */
-/*!*******************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/index.js ***!
-  \*******************************************************************************************************************************************/
+/* 178 */
+/*!*************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/index.js ***!
+  \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var config = __webpack_require__(/*! ../../config */ 178),
-  hljs = __webpack_require__(/*! ./highlight */ 179);
+var config = __webpack_require__(/*! ../../config */ 179),
+  hljs = __webpack_require__(/*! ./highlight */ 180);
 config.highlight.forEach(function (item) {
-  hljs.registerLanguage(item, __webpack_require__(184)("./".concat(item)).default);
+  hljs.registerLanguage(item, __webpack_require__(185)("./".concat(item)).default);
 });
 module.exports = hljs;
 
 /***/ }),
-/* 178 */
-/*!****************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/config.js ***!
-  \****************************************************************************************************************************/
+/* 179 */
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/config.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -19624,10 +19709,10 @@ module.exports = {
 };
 
 /***/ }),
-/* 179 */
-/*!***********************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/highlight.js ***!
-  \***********************************************************************************************************************************************/
+/* 180 */
+/*!*****************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/highlight.js ***!
+  \*****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19636,9 +19721,9 @@ module.exports = {
 
 var _toConsumableArray = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18);
 var _slicedToArray = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ 5);
-var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ 180);
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 181);
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 183);
+var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ 181);
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ 182);
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ 184);
 var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ 23);
 var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ 24);
 var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
@@ -20457,7 +20542,7 @@ var highlight = HLJS({});
 module.exports = highlight;
 
 /***/ }),
-/* 180 */
+/* 181 */
 /*!*********************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
   \*********************************************************/
@@ -20484,7 +20569,7 @@ function _inherits(subClass, superClass) {
 module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 181 */
+/* 182 */
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
   \**************************************************************************/
@@ -20492,7 +20577,7 @@ module.exports = _inherits, module.exports.__esModule = true, module.exports["de
 /***/ (function(module, exports, __webpack_require__) {
 
 var _typeof = __webpack_require__(/*! ./typeof.js */ 13)["default"];
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 182);
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ 183);
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -20504,7 +20589,7 @@ function _possibleConstructorReturn(self, call) {
 module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 182 */
+/* 183 */
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
   \**********************************************************************/
@@ -20520,7 +20605,7 @@ function _assertThisInitialized(self) {
 module.exports = _assertThisInitialized, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 183 */
+/* 184 */
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
   \***************************************************************/
@@ -20536,52 +20621,52 @@ function _getPrototypeOf(o) {
 module.exports = _getPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
-/* 184 */
-/*!**********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages sync ^\.\/.*$ ***!
-  \**********************************************************************************************************************************************************/
+/* 185 */
+/*!****************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages sync ^\.\/.*$ ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./bash": 185,
-	"./bash.js": 185,
-	"./c": 186,
-	"./c-like": 187,
-	"./c-like.js": 187,
-	"./c.js": 186,
-	"./css": 188,
-	"./css.js": 188,
-	"./dart": 189,
-	"./dart.js": 189,
-	"./go": 190,
-	"./go.js": 190,
-	"./htmlbars": 191,
-	"./htmlbars.js": 191,
-	"./java": 192,
-	"./java.js": 192,
-	"./javascript": 193,
-	"./javascript.js": 193,
-	"./json": 194,
-	"./json.js": 194,
-	"./less": 195,
-	"./less.js": 195,
-	"./nginx": 196,
-	"./nginx.js": 196,
-	"./php": 197,
-	"./php.js": 197,
-	"./python": 198,
-	"./python-repl": 199,
-	"./python-repl.js": 199,
-	"./python.js": 198,
-	"./scss": 200,
-	"./scss.js": 200,
-	"./shell": 201,
-	"./shell.js": 201,
-	"./typescript": 202,
-	"./typescript.js": 202,
-	"./xml": 203,
-	"./xml.js": 203
+	"./bash": 186,
+	"./bash.js": 186,
+	"./c": 187,
+	"./c-like": 188,
+	"./c-like.js": 188,
+	"./c.js": 187,
+	"./css": 189,
+	"./css.js": 189,
+	"./dart": 190,
+	"./dart.js": 190,
+	"./go": 191,
+	"./go.js": 191,
+	"./htmlbars": 192,
+	"./htmlbars.js": 192,
+	"./java": 193,
+	"./java.js": 193,
+	"./javascript": 194,
+	"./javascript.js": 194,
+	"./json": 195,
+	"./json.js": 195,
+	"./less": 196,
+	"./less.js": 196,
+	"./nginx": 197,
+	"./nginx.js": 197,
+	"./php": 198,
+	"./php.js": 198,
+	"./python": 199,
+	"./python-repl": 200,
+	"./python-repl.js": 200,
+	"./python.js": 199,
+	"./scss": 201,
+	"./scss.js": 201,
+	"./shell": 202,
+	"./shell.js": 202,
+	"./typescript": 203,
+	"./typescript.js": 203,
+	"./xml": 204,
+	"./xml.js": 204
 };
 
 
@@ -20602,13 +20687,13 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 184;
+webpackContext.id = 185;
 
 /***/ }),
-/* 185 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/bash.js ***!
-  \****************************************************************************************************************************************************/
+/* 186 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/bash.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20714,10 +20799,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 186 */
-/*!*************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/c.js ***!
-  \*************************************************************************************************************************************************/
+/* 187 */
+/*!*******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/c.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20750,10 +20835,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 187 */
-/*!******************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/c-like.js ***!
-  \******************************************************************************************************************************************************/
+/* 188 */
+/*!************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/c-like.js ***!
+  \************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20947,10 +21032,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 188 */
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/css.js ***!
-  \***************************************************************************************************************************************************/
+/* 189 */
+/*!*********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/css.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21074,10 +21159,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 189 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/dart.js ***!
-  \****************************************************************************************************************************************************/
+/* 190 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/dart.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21188,10 +21273,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 190 */
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/go.js ***!
-  \**************************************************************************************************************************************************/
+/* 191 */
+/*!********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/go.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21253,10 +21338,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 191 */
-/*!********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/htmlbars.js ***!
-  \********************************************************************************************************************************************************/
+/* 192 */
+/*!**************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/htmlbars.js ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21343,10 +21428,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 192 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/java.js ***!
-  \****************************************************************************************************************************************************/
+/* 193 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/java.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21445,10 +21530,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 193 */
-/*!**********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/javascript.js ***!
-  \**********************************************************************************************************************************************************/
+/* 194 */
+/*!****************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/javascript.js ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21680,10 +21765,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 194 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/json.js ***!
-  \****************************************************************************************************************************************************/
+/* 195 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/json.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21749,10 +21834,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 195 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/less.js ***!
-  \****************************************************************************************************************************************************/
+/* 196 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/less.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21937,10 +22022,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 196 */
-/*!*****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/nginx.js ***!
-  \*****************************************************************************************************************************************************/
+/* 197 */
+/*!***********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/nginx.js ***!
+  \***********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22060,10 +22145,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 197 */
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/php.js ***!
-  \***************************************************************************************************************************************************/
+/* 198 */
+/*!*********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/php.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22221,10 +22306,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 198 */
-/*!******************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/python.js ***!
-  \******************************************************************************************************************************************************/
+/* 199 */
+/*!************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/python.js ***!
+  \************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22363,10 +22448,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 199 */
-/*!***********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/python-repl.js ***!
-  \***********************************************************************************************************************************************************/
+/* 200 */
+/*!*****************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/python-repl.js ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22408,10 +22493,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 200 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/scss.js ***!
-  \****************************************************************************************************************************************************/
+/* 201 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/scss.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22524,10 +22609,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 201 */
-/*!*****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/shell.js ***!
-  \*****************************************************************************************************************************************************/
+/* 202 */
+/*!***********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/shell.js ***!
+  \***********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22561,10 +22646,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 202 */
-/*!**********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/typescript.js ***!
-  \**********************************************************************************************************************************************************/
+/* 203 */
+/*!****************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/typescript.js ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22731,10 +22816,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 203 */
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/xml.js ***!
-  \***************************************************************************************************************************************************/
+/* 204 */
+/*!*********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/highlight/languages/xml.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22880,10 +22965,10 @@ function _default(hljs) {
 }
 
 /***/ }),
-/* 204 */
-/*!*********************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/markdown.js ***!
-  \*********************************************************************************************************************************************/
+/* 205 */
+/*!***************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/markdown.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27523,33 +27608,33 @@ function _default(hljs) {
     }]
   }, {}, [67])(67);
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! (webpack)/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3)))
 
 /***/ }),
-/* 205 */
-/*!*******************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins sync ^\.\/.*$ ***!
-  \*******************************************************************************************************************************************************/
+/* 206 */
+/*!*************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins sync ^\.\/.*$ ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./emoji": 206,
-	"./emoji.js": 206,
-	"./ins": 207,
-	"./ins.js": 207,
-	"./latex": 208,
-	"./latex.js": 208,
-	"./mark": 209,
-	"./mark.js": 209,
-	"./sub": 210,
-	"./sub.js": 210,
-	"./sup": 211,
-	"./sup.js": 211,
-	"./todo": 212,
-	"./todo.js": 212,
-	"./yuml": 213,
-	"./yuml.js": 213
+	"./emoji": 207,
+	"./emoji.js": 207,
+	"./ins": 208,
+	"./ins.js": 208,
+	"./latex": 209,
+	"./latex.js": 209,
+	"./mark": 210,
+	"./mark.js": 210,
+	"./sub": 211,
+	"./sub.js": 211,
+	"./sup": 212,
+	"./sup.js": 212,
+	"./todo": 213,
+	"./todo.js": 213,
+	"./yuml": 214,
+	"./yuml.js": 214
 };
 
 
@@ -27570,13 +27655,13 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 205;
+webpackContext.id = 206;
 
 /***/ }),
-/* 206 */
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/emoji.js ***!
-  \**************************************************************************************************************************************************/
+/* 207 */
+/*!********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/emoji.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29322,10 +29407,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 207 */
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/ins.js ***!
-  \************************************************************************************************************************************************/
+/* 208 */
+/*!******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/ins.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29415,14 +29500,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 208 */
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/latex.js ***!
-  \**************************************************************************************************************************************************/
+/* 209 */
+/*!********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/latex.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var config = __webpack_require__(/*! ../../../config */ 178);
+var config = __webpack_require__(/*! ../../../config */ 179);
 
 // Test if potential opening or closing delimieter
 // Assumes that there is a "$" at state.src[pos]
@@ -29584,10 +29669,10 @@ module.exports = function (md) {
 };
 
 /***/ }),
-/* 209 */
-/*!*************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/mark.js ***!
-  \*************************************************************************************************************************************************/
+/* 210 */
+/*!*******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/mark.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29677,10 +29762,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 210 */
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/sub.js ***!
-  \************************************************************************************************************************************************/
+/* 211 */
+/*!******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/sub.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29746,10 +29831,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 211 */
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/sup.js ***!
-  \************************************************************************************************************************************************/
+/* 212 */
+/*!******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/sup.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29815,10 +29900,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 212 */
-/*!*************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/todo.js ***!
-  \*************************************************************************************************************************************************/
+/* 213 */
+/*!*******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/todo.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30003,14 +30088,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 213 */
-/*!*************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/yuml.js ***!
-  \*************************************************************************************************************************************************/
+/* 214 */
+/*!*******************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/markdown/plugins/yuml.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var config = __webpack_require__(/*! ../../../config */ 178);
+var config = __webpack_require__(/*! ../../../config */ 179);
 var mermaidChart = function mermaidChart(code) {
   return "<yuml value=\"".concat(encodeURIComponent(code), "\"></yuml>");
 };
@@ -30032,17 +30117,17 @@ module.exports = function (md) {
 };
 
 /***/ }),
-/* 214 */
-/*!*********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/index.js ***!
-  \*********************************************************************************************************************************/
+/* 215 */
+/*!***************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/index.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var _toConsumableArray = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ 18);
-var parse2 = __webpack_require__(/*! ./parse2/index */ 215),
+var parse2 = __webpack_require__(/*! ./parse2/index */ 216),
   // parse5 = require('./parse5/index').parse,
-  config = __webpack_require__(/*! ../config */ 178),
+  config = __webpack_require__(/*! ../config */ 179),
   // html与wxml转换关系
   correspondTag = function () {
     var result = {
@@ -30158,13 +30243,13 @@ module.exports = function (str, option) {
     decodeEntities: true
   }), option);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! (webpack)/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../../Program Files/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3)))
 
 /***/ }),
-/* 215 */
-/*!****************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/index.js ***!
-  \****************************************************************************************************************************************/
+/* 216 */
+/*!**********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/index.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30173,15 +30258,15 @@ function parseDOM(r, e) {
   var a = new domhandler_1.DomHandler(void 0, e);
   return new Parser_1.Parser(a, e).end(r), a.dom;
 }
-var domhandler_1 = __webpack_require__(/*! ./domhandler/index */ 216),
-  Parser_1 = __webpack_require__(/*! ./Parser */ 218);
+var domhandler_1 = __webpack_require__(/*! ./domhandler/index */ 217),
+  Parser_1 = __webpack_require__(/*! ./Parser */ 219);
 module.exports = parseDOM;
 
 /***/ }),
-/* 216 */
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/domhandler/index.js ***!
-  \***************************************************************************************************************************************************/
+/* 217 */
+/*!*********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/domhandler/index.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30193,7 +30278,7 @@ var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ 13);
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var node_1 = __webpack_require__(/*! ./node */ 217);
+var node_1 = __webpack_require__(/*! ./node */ 218);
 exports.Node = node_1.Node, exports.Element = node_1.Element, exports.DataNode = node_1.DataNode, exports.NodeWithChildren = node_1.NodeWithChildren;
 var reWhitespace = /\s+/g,
   defaultOpts = {
@@ -30257,10 +30342,10 @@ var reWhitespace = /\s+/g,
 exports.DomHandler = DomHandler, exports["default"] = DomHandler;
 
 /***/ }),
-/* 217 */
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/domhandler/node.js ***!
-  \**************************************************************************************************************************************************/
+/* 218 */
+/*!********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/domhandler/node.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30404,10 +30489,10 @@ var Element = function (e) {
 exports.Element = Element;
 
 /***/ }),
-/* 218 */
-/*!*****************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/Parser.js ***!
-  \*****************************************************************************************************************************************/
+/* 219 */
+/*!***********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/Parser.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30427,7 +30512,7 @@ var __importDefault = this && this.__importDefault || function (t) {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var Tokenizer_1 = __importDefault(__webpack_require__(/*! ./Tokenizer */ 219)),
+var Tokenizer_1 = __importDefault(__webpack_require__(/*! ./Tokenizer */ 220)),
   formTags = new Set(["input", "option", "optgroup", "select", "button", "datalist", "textarea"]),
   pTag = new Set(["p"]),
   openImpliesClose = {
@@ -30554,10 +30639,10 @@ Parser.prototype._updatePosition = function (t) {
 }, exports.Parser = Parser;
 
 /***/ }),
-/* 219 */
-/*!********************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/Tokenizer.js ***!
-  \********************************************************************************************************************************************/
+/* 220 */
+/*!**************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/Tokenizer.js ***!
+  \**************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30590,10 +30675,10 @@ var __importDefault = this && this.__importDefault || function (t) {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var decode_codepoint_1 = __importDefault(__webpack_require__(/*! ./entities/decode_codepoint */ 220)),
-  entities_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/entities */ 222)),
-  legacy_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/legacy */ 223)),
-  xml_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/xml */ 224)),
+var decode_codepoint_1 = __importDefault(__webpack_require__(/*! ./entities/decode_codepoint */ 221)),
+  entities_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/entities */ 223)),
+  legacy_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/legacy */ 224)),
+  xml_json_1 = __importDefault(__webpack_require__(/*! ./entities/maps/xml */ 225)),
   stateBeforeCdata1 = ifElseState("C", 23, 16),
   stateBeforeCdata2 = ifElseState("D", 24, 16),
   stateBeforeCdata3 = ifElseState("A", 25, 16),
@@ -30745,10 +30830,10 @@ var decode_codepoint_1 = __importDefault(__webpack_require__(/*! ./entities/deco
 exports["default"] = Tokenizer;
 
 /***/ }),
-/* 220 */
-/*!************************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/decode_codepoint.js ***!
-  \************************************************************************************************************************************************************/
+/* 221 */
+/*!******************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/decode_codepoint.js ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30770,14 +30855,14 @@ var __importDefault = this && this.__importDefault || function (e) {
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
-var decode_json_1 = __importDefault(__webpack_require__(/*! ./maps/decode */ 221));
+var decode_json_1 = __importDefault(__webpack_require__(/*! ./maps/decode */ 222));
 exports["default"] = decodeCodePoint;
 
 /***/ }),
-/* 221 */
-/*!*******************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/decode.js ***!
-  \*******************************************************************************************************************************************************/
+/* 222 */
+/*!*************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/decode.js ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -30814,10 +30899,10 @@ module.exports = {
 };
 
 /***/ }),
-/* 222 */
-/*!*********************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/entities.js ***!
-  \*********************************************************************************************************************************************************/
+/* 223 */
+/*!***************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/entities.js ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -32951,10 +33036,10 @@ module.exports = {
 };
 
 /***/ }),
-/* 223 */
-/*!*******************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/legacy.js ***!
-  \*******************************************************************************************************************************************************/
+/* 224 */
+/*!*************************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/legacy.js ***!
+  \*************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -33069,10 +33154,10 @@ module.exports = {
 };
 
 /***/ }),
-/* 224 */
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/xml.js ***!
-  \****************************************************************************************************************************************************/
+/* 225 */
+/*!**********************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/parse/parse2/entities/maps/xml.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -33086,7 +33171,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 225 */,
 /* 226 */,
 /* 227 */,
 /* 228 */,
@@ -33107,10 +33191,11 @@ module.exports = {
 /* 243 */,
 /* 244 */,
 /* 245 */,
-/* 246 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-tabs/props.js ***!
-  \*******************************************************************************************************************/
+/* 246 */,
+/* 247 */
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-tabs/props.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33189,7 +33274,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 247 */,
 /* 248 */,
 /* 249 */,
 /* 250 */,
@@ -33222,10 +33306,11 @@ exports.default = _default;
 /* 277 */,
 /* 278 */,
 /* 279 */,
-/* 280 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-tabbar/props.js ***!
-  \*********************************************************************************************************************/
+/* 280 */,
+/* 281 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-tabbar/props.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33284,17 +33369,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 281 */,
 /* 282 */,
 /* 283 */,
 /* 284 */,
 /* 285 */,
 /* 286 */,
 /* 287 */,
-/* 288 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-tabbar-item/props.js ***!
-  \**************************************************************************************************************************/
+/* 288 */,
+/* 289 */
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-tabbar-item/props.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33343,7 +33428,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 289 */,
 /* 290 */,
 /* 291 */,
 /* 292 */,
@@ -33355,10 +33439,11 @@ exports.default = _default;
 /* 298 */,
 /* 299 */,
 /* 300 */,
-/* 301 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-badge/props.js ***!
-  \********************************************************************************************************************/
+/* 301 */,
+/* 302 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-badge/props.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33445,7 +33530,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 302 */,
 /* 303 */,
 /* 304 */,
 /* 305 */,
@@ -33466,10 +33550,11 @@ exports.default = _default;
 /* 320 */,
 /* 321 */,
 /* 322 */,
-/* 323 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-popup/props.js ***!
-  \********************************************************************************************************************/
+/* 323 */,
+/* 324 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-popup/props.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33563,17 +33648,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 324 */,
 /* 325 */,
 /* 326 */,
 /* 327 */,
 /* 328 */,
 /* 329 */,
 /* 330 */,
-/* 331 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-input/props.js ***!
-  \********************************************************************************************************************/
+/* 331 */,
+/* 332 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-input/props.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33775,17 +33860,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 332 */,
 /* 333 */,
 /* 334 */,
 /* 335 */,
 /* 336 */,
 /* 337 */,
 /* 338 */,
-/* 339 */
-/*!**************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
-  \**************************************************************************************************************************/
+/* 339 */,
+/* 340 */
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -33802,17 +33887,17 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 340 */,
 /* 341 */,
 /* 342 */,
 /* 343 */,
 /* 344 */,
 /* 345 */,
 /* 346 */,
-/* 347 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-icon/icons.js ***!
-  \*******************************************************************************************************************/
+/* 347 */,
+/* 348 */
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-icon/icons.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34040,10 +34125,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 348 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-icon/props.js ***!
-  \*******************************************************************************************************************/
+/* 349 */
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-icon/props.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34147,17 +34232,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 349 */,
 /* 350 */,
 /* 351 */,
 /* 352 */,
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
-/*!****************************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/jo-markdown/components/jo-markdown/audio-player/Audio.js ***!
-  \****************************************************************************************************************************************/
+/* 356 */,
+/* 357 */
+/*!**********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/jo-markdown/components/jo-markdown/audio-player/Audio.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34305,7 +34390,6 @@ module.exports = Audio;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
-/* 357 */,
 /* 358 */,
 /* 359 */,
 /* 360 */,
@@ -34339,10 +34423,11 @@ module.exports = Audio;
 /* 388 */,
 /* 389 */,
 /* 390 */,
-/* 391 */
-/*!*******************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-line/props.js ***!
-  \*******************************************************************************************************************/
+/* 391 */,
+/* 392 */
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-line/props.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34390,17 +34475,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 392 */,
 /* 393 */,
 /* 394 */,
 /* 395 */,
 /* 396 */,
 /* 397 */,
 /* 398 */,
-/* 399 */
-/*!**********************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-overlay/props.js ***!
-  \**********************************************************************************************************************/
+/* 399 */,
+/* 400 */
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-overlay/props.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34439,17 +34524,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 400 */,
 /* 401 */,
 /* 402 */,
 /* 403 */,
 /* 404 */,
 /* 405 */,
 /* 406 */,
-/* 407 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-transition/props.js ***!
-  \*************************************************************************************************************************/
+/* 407 */,
+/* 408 */
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-transition/props.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34488,10 +34573,10 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 408 */
-/*!******************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-transition/transition.js ***!
-  \******************************************************************************************************************************/
+/* 409 */
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-transition/transition.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34505,7 +34590,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 57));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 59));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 409));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 410));
 // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {
   return new Promise(function (resolve) {
@@ -34597,10 +34682,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 409 */
-/*!********************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
-  \********************************************************************************************************************************/
+/* 410 */
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34790,17 +34875,17 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 410 */,
 /* 411 */,
 /* 412 */,
 /* 413 */,
 /* 414 */,
 /* 415 */,
 /* 416 */,
-/* 417 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Administrator/Documents/HBuilderProjects/answer.ai/uni_modules/uview-ui/components/u-status-bar/props.js ***!
-  \*************************************************************************************************************************/
+/* 417 */,
+/* 418 */
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Documents/HBuildertX/answer.ai/uni_modules/uview-ui/components/u-status-bar/props.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
